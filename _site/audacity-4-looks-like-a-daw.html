@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Audacity 4 Looks Like a DAW! Even If the Developers Say It Isn’t</title>
+  <meta name='description' content='Fully Modulated is a podcast and blog that covers radio, broadcasting technology, industry news, and audio engineering topics.'>
+
+  <link rel="canonical" href="https://fullymodulated.com/audacity-4-looks-like-a-daw">
+  <link rel="alternate" type="application/rss+xml" title="" href="/feed.xml">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Audacity 4 Looks Like a DAW! Even If the Developers Say It Isn’t – Fully Modulated">
+  <meta name="twitter:description" content="
+  “Audacity 4 will feature a complete remake of the UI and is still quite some ways out.”
+
+">
+  <meta name="twitter:image:src" content="https://fullymodulated.com/images/audacity4.png">
+  <meta name="twitter:image:src" content="https://fullymodulated.com/images/audacity4.png">
+
+  <!-- Facebook OpenGraph -->
+  <meta property="og:url" content="https://fullymodulated.com/audacity-4-looks-like-a-daw">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Audacity 4 Looks Like a DAW! Even If the Developers Say It Isn’t – Fully Modulated">
+  <meta property="og:description" content="
+  “Audacity 4 will feature a complete remake of the UI and is still quite some ways out.”
+
+">
+  <meta property="og:image" content="https://fullymodulated.com/images/audacity4.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+
+  <script>
+    const defaultTheme = "dark";
+    const isToggleEnabled = false;
+    const userTheme = localStorage.getItem("theme");
+
+    function setTheme(mode) {
+      if (mode === "dark") {
+        document.documentElement.setAttribute("dark", "");
+        document.documentElement.classList.add("dark-mode");
+      } else if (mode === "light") {
+        document.documentElement.removeAttribute("dark");
+        document.documentElement.classList.remove("dark-mode");
+      }
+    }
+
+    if (isToggleEnabled) {
+      if (userTheme) {
+        setTheme(userTheme);
+      } else {
+        setTheme(defaultTheme);
+      }
+    } else {
+      setTheme(defaultTheme);
+    }
+
+    if (localStorage.getItem("classView") === "list") {
+      document.documentElement.setAttribute("list", "");
+      document.documentElement.classList.add('view-list');
+    }
+  </script>
+
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+
+  
+
+  <!-- begin global wrap -->
+  <div class="global-wrap">
+    <!-- begin header -->
+<header class="header">
+  <div class="container-big">
+    <div class="row">
+      <div class="header__inner col col-12">
+
+        <div class="logo">
+          <a class="logo__link" href="/">
+          
+          <img class="logo__image" src="/logo.png" alt="Fully Modulated">
+          <img class="logo__image__dark" src="/logo.png" alt="Fully Modulated">
+          
+          </a>
+        </div>
+
+        <div class="hamburger">
+          <div></div>
+        </div>
+
+        <nav class="main-nav" aria-label="Main menu">
+          <div class="main-nav__box">
+            <ul class="nav__list list-reset">
+              
+              
+              <li class="nav__item">
+                <a href="/" class="nav__link">Home</a>
+              </li>
+              
+              
+              
+              <li class="nav__item">
+                <a href="/tags/?tag=episodes" class="nav__link">Episodes</a>
+              </li>
+              
+              
+              
+              <li class="nav__item">
+                <a href="/tags/?tag=blog" class="nav__link">Blog</a>
+              </li>
+              
+              
+              
+              <li class="nav__item">
+                <a href="/archive/" class="nav__link">Archive</a>
+              </li>
+              
+              
+              
+              <li class="nav__item dropdown">
+                <div class="dropdown-toggle">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="4" fill="none">
+                    <circle cx="2" cy="2" r="2" fill="var(--link-color)"/>
+                    <circle cx="10" cy="2" r="2" fill="var(--link-color)"/>
+                    <circle cx="18" cy="2" r="2" fill="var(--link-color)"/>
+                  </svg>
+                </div>
+                <div class="dropdown-menu">
+                  
+                  <a href="/about/" class="nav__link">About</a>
+                  
+                  <a href="/contact/" class="nav__link">Contact</a>
+                  
+                </div>
+              </li>
+              
+              
+            </ul>
+          </div>
+        </nav>
+
+        <div class="nav-button">
+          
+          <div class="search-button">
+            <svg class="search-button__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M338.29 338.29L448 448"/></svg>
+            <span class="search-button__text">Search posts...</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</header>
+<!-- end header -->
+
+<!-- begin search -->
+<div class="search">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <div class="search__box">
+          <div class="search__group">
+            <i class="search__close fa-solid fa-xmark"></i>
+            <label for="js-search-input" class="screen-reader-text">Search for Blog</label>
+            <input type="text" id="js-search-input" class="search__text" autocomplete="off"
+              placeholder="Type to search...">
+          </div>
+          <div class="search-results-list view-list" id="js-results-container"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="search__overlay"></div>
+</div>
+<!-- end search -->
+
+    <!-- begin content -->
+    <main class="content" aria-label="Content">
+      <!-- begin post -->
+<div class="container">
+
+  <div class="row">
+    <div class="col col-8 col-d-12">
+
+      <div class="post-head">
+
+        
+        
+        <div class="post-image">
+          <img class="lazy" data-src="/images/audacity4.png" alt="Audacity 4 Looks Like a DAW! Even If the Developers Say It Isn’t">
+        </div>
+        
+        
+
+        <div class="post-info">
+          
+          <div class="post-tags">
+            
+            <a href="/tags/?tag=tools" class="post-tag"
+              style="background: #009999;">Tools</a>
+            
+          </div>
+          
+
+          <h1 class="post-title">Audacity 4 Looks Like a DAW! Even If the Developers Say It Isn’t</h1>
+
+          <div class="post-meta">
+            <a href="/about/" class="post-meta__image">
+              <img class="lazy" data-src="/images/tyler_profile.jpg"
+                alt="Tyler Woodward">
+            </a>
+
+            <div class="post-meta__content">
+              <a class="post-meta__author" href="/about/">Tyler Woodward</a>
+              <div class="post-meta__bottom">
+                <time class="post-date" datetime="2025-10-08T08:00:00-05:00">08 Oct, 2025</time> –
+                <span class="post-minutes">
+                  
+                   7 min read  </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <article class="post">
+        <div class="post__content">
+          
+          <div class="post__toc">
+            <h2 class="post__toc__title">Table of Contents</h2>
+            <ol class="post__toc__list"><li><a href="#audacity-the-free-editor-that-never-quit">Audacity: The Free Editor That Never Quit</a></li><li><a href="#whats-new-in-audacity-4">What’s New in Audacity 4</a></li><li><a href="#a-modern-modular-interface--and-finally-dark-mode">A Modern, Modular Interface — and Finally, Dark Mode</a></li><li><a href="#real-time-effects-that-actually-feel-real-time">Real-Time Effects That Actually Feel Real-Time</a></li><li><a href="#sync-lock-and-close-gap--the-workflow-upgrades-im-excited-about">Sync Lock and Close Gap — The Workflow Upgrades I’m Excited About</a></li><li><a href="#under-the-hood-performance-upgrades">Under-the-Hood Performance Upgrades</a></li><li><a href="#integration-with-muse-hub">Integration with Muse Hub</a></li><li><a href="#so-its-not-a-daw">So… It’s Not a DAW?</a></li><li><a href="#why-radio-stations-should-care">Why Radio Stations Should Care</a></li><li><a href="#huge-props-to-the-developers">Huge Props to the Developers</a></li><li><a href="#final-thoughts">Final Thoughts</a></li></ol>
+          </div>
+          
+
+          <blockquote>
+  <p><em>“Audacity 4 will feature a complete remake of the UI and is still quite some ways out.”</em></p>
+</blockquote>
+
+<p>Two and a half decades after its first release, <strong><a href="https://www.audacityteam.org">Audacity</a></strong> is about to reinvent itself. The beloved free, open-source audio editor that powered millions of podcasts, school projects, and late-night radio promos is getting its biggest overhaul yet — and even though the developers insist it’s <em>not</em> a digital audio workstation, <strong>it sure looks like one now</strong>.</p>
+
+<p>According to the development team, <strong>Audacity 4 is expected to officially release sometime in 2026</strong>, and based on what we’ve seen so far, it’s shaping up to be a landmark update for both hobbyists and professionals alike.</p>
+
+<h2 id="audacity-the-free-editor-that-never-quit">Audacity: The Free Editor That Never Quit</h2>
+
+<p>If you’ve ever worked in radio, you’ve probably used Audacity. It’s been the default quick-edit tool for decades — lightweight, reliable, and somehow still free. You can record a voice track, clean it up, and export it in minutes.</p>
+
+<p>Audacity is <strong>cross-platform</strong>, <strong>non-destructive</strong>, and <strong>plugin-friendly</strong>, supporting WAV, MP3, FLAC, and AAC along with VST, LV2, LADSPA, and AU effects. Its simplicity makes it indispensable for broadcast engineers and producers juggling deadlines, where “good enough” audio still has to sound great on-air.</p>
+
+<p>And that accessibility is the whole point. While Adobe Audition and Reaper dominate the pro market, <strong>Audacity’s zero-cost barrier</strong> lets smaller stations and community broadcasters work with the same basic toolkit — no subscriptions, no DRM, no corporate accounts.</p>
+
+<p>If you’re just getting started with affordable tools, check out <a href="/posts/best-free-tools-for-radio-production">The Best Free Tools for Radio Production</a> or <a href="/posts/audio-processing-explained">Audio Processing Explained: How Stations Tune Their Sound</a>.</p>
+
+<h2 id="whats-new-in-audacity-4">What’s New in Audacity 4</h2>
+
+<p>The official <a href="https://www.youtube.com/watch?v=QYM3TWf_G38">Audacity 4 preview video</a> offers the first full look at what’s coming — and if you want to skip straight to the big reveal, <strong>jump to the 32:03 mark</strong> for the new interface and features.</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; margin-top: 1em; margin-bottom: 1em;">
+  <iframe src="https://www.youtube.com/embed/QYM3TWf_G38?si=_s6lkbsM-1f5TwUE&amp;start=1923" title="Audacity 4 Preview Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+  </iframe>
+</div>
+
+<p>According to both the video and posts on the <a href="https://forum.audacityteam.org/t/master-has-been-switched-to-4-0-0-development/120444?utm_source=chatgpt.com">Audacity Team Forum</a>, version 4.0 brings a completely reworked interface, major performance improvements, and real-time effects — all wrapped in a sleeker, DAW-like package.</p>
+
+<hr />
+
+<h2 id="a-modern-modular-interface--and-finally-dark-mode">A Modern, Modular Interface — and Finally, Dark Mode</h2>
+
+<p>The flat, early-2000s UI is gone. Audacity 4 features <strong>dockable panels</strong>, <strong>customizable layouts</strong>, and yes — <strong>dark mode</strong>. That might sound trivial, but for anyone staring at waveforms for hours, dark mode is a godsend. It’s cleaner, easier on the eyes, and finally feels like it belongs in 2025.</p>
+
+<p>You can now keep your meters, timeline, and effects stack visible in whatever configuration fits your workflow. For engineers working with multiple tracks — like voice, beds, and imaging — this makes a huge difference. It’s faster, less cluttered, and just more enjoyable to use.</p>
+
+<p>And it’s not just dark mode — it’s all the <strong>small UI touches</strong> that really elevate this release. One standout: <strong>the new dB value readout in the Graphic EQ</strong>. It’s subtle, but it completely changes how you dial in precise tone shaping. It’s the kind of refinement you expect in high-end DAWs — and now, Audacity has it.</p>
+
+<h2 id="real-time-effects-that-actually-feel-real-time">Real-Time Effects That Actually Feel Real-Time</h2>
+
+<p>Older versions of Audacity applied effects destructively — you’d click, wait, and hope. Now, with <strong>real-time previewing</strong>, you can tweak EQ, compression, or reverb <em>as you listen</em>. This alone pushes Audacity much closer to “true DAW” behavior, whether the devs admit it or not.</p>
+
+<p>According to the <a href="https://github.com/audacity/audacity/milestone/18?utm_source=chatgpt.com">GitHub milestone for 4.0</a>, new audio routing and playback changes will further improve responsiveness. For anyone mixing multiple voice parts or station IDs, this is a massive leap forward.</p>
+
+<h2 id="sync-lock-and-close-gap--the-workflow-upgrades-im-excited-about">Sync Lock and Close Gap — The Workflow Upgrades I’m Excited About</h2>
+
+<p>Two smaller changes are flying under the radar, but they’re huge for anyone editing longform content like radio documentaries or podcasts.</p>
+
+<p><strong>Sync Lock</strong> ensures that when you move one track, everything else — your music beds, ambience, and SFX — stay perfectly in sync. No more manually realigning elements every time you shift narration. It’s simple, but it’s the kind of polish Audacity has needed for years.</p>
+
+<p>And then there’s <strong>Close Gap</strong> — a feature I’ve grown completely reliant on in <a href="https://hindenburg.com/products/hindenburg-pro">Hindenburg Pro</a>, which is what I use to record <em>Fully Modulated</em>. Close Gap automatically pulls clips together after you delete silence or a section, keeping the pacing tight. Seeing that feature land in Audacity 4 makes it feel instantly more production-ready.</p>
+
+<h2 id="under-the-hood-performance-upgrades">Under-the-Hood Performance Upgrades</h2>
+
+<p>The switch to <strong>Qt 6</strong> and a rewritten audio backend promises smoother playback, lower latency, and better multitrack performance — even on mid-range laptops. That’s key for field reporters, newsrooms, or small-market studios still running older gear.</p>
+
+<h2 id="integration-with-muse-hub">Integration with Muse Hub</h2>
+
+<p>Audacity 4 also links directly with <a href="https://blog.musehub.com/how-to-use-effects-in-audacity/?utm_source=chatgpt.com">Muse Hub</a>, connecting users to curated plugins, sound effects, and potentially collaborative tools. While purists are cautious about external tie-ins, this step builds a real ecosystem around the software — something Audacity has never had before.</p>
+
+<h2 id="so-its-not-a-daw">So… It’s Not a DAW?</h2>
+
+<p>Officially, <strong>no</strong>. The developers say Audacity isn’t meant to compete with full-fledged DAWs. But when you watch that preview footage — dockable panels, effect racks, real-time monitoring, and now features like Sync Lock, Close Gap, and dB readouts in the EQ — it’s hard not to laugh a little.</p>
+
+<p>Because <strong>functionally</strong>, Audacity 4 <em>is</em> a DAW for most people who need one. You can record, edit, mix, monitor effects in real time, and export in broadcast formats. For underfunded newsrooms, LPFM operations, and podcasters, that’s not just enough — it’s ideal.</p>
+
+<p>And in a world where software like <strong>Adobe Audition</strong> (<a href="https://www.adobe.com/products/audition.html">adobe.com</a>) costs $22.99 a month, Audacity’s price tag — <strong>free, forever</strong> — is still unbeatable.</p>
+
+<h2 id="why-radio-stations-should-care">Why Radio Stations Should Care</h2>
+
+<p>Radio has always lived on quick turnaround: grabbing interviews, cutting highlights, trimming tracks, and moving on. Audacity remains the fastest way to do that without getting lost in the bloat of pro DAWs.</p>
+
+<p><strong>Audacity 4’s upgrades mean:</strong></p>
+
+<ul>
+  <li>Faster, more stable multitrack sessions</li>
+  <li>Real-time monitoring without heavy CPU load</li>
+  <li>Easier plugin management via Muse Hub</li>
+  <li>Sync Lock for cleaner multi-track editing</li>
+  <li>Close Gap for quicker storytelling and pacing</li>
+  <li>A flexible UI for newsrooms, production, or aircheck editing</li>
+  <li>Small but mighty UI improvements like EQ dB value readouts</li>
+</ul>
+
+<p>In short, your engineers can spend less time rendering and more time producing.</p>
+
+<h2 id="huge-props-to-the-developers">Huge Props to the Developers</h2>
+
+<p>Credit where it’s due: the <strong>Audacity developers have absolutely earned this one</strong>. What they’ve done here is bring a 25-year-old piece of software <strong>into the 21st century</strong> without bloating it or losing what made it approachable in the first place.</p>
+
+<p>The new UI, the real-time effects, the usability tweaks — even the tiny touches like visible dB values in EQ curves — show a genuine care for people who actually use this software every day. This update isn’t just a facelift; it’s a thoughtful modernization.</p>
+
+<p>So yeah — massive props to the team for making open-source audio feel modern again. And honestly, <strong>if Audacity 4 performs as good as it looks</strong>, I might have to <strong>rethink my daily use of Hindenburg Pro</strong>.</p>
+
+<h2 id="final-thoughts">Final Thoughts</h2>
+
+<p>Audacity 4 is shaping up to be one of the most significant updates in open-source audio history. It’s modern, faster, and friendlier to professionals — but without losing its “grab and go” spirit.</p>
+
+<p>And while it’s still in development with a <strong>2026 release window</strong>, what we’ve seen so far feels like a full evolution, not just an update.</p>
+
+<p>Despite the team’s insistence that it’s not a DAW, <strong>it sure looks and behaves like one</strong>. For budget-constrained radio operations and independent creators, this is the best deal in production software — period.</p>
+
+<p>When it launches, Audacity 4 might just prove that sometimes the best DAW… is the one that swears it isn’t.</p>
+
+        </div>
+      </article>
+
+      <div class="share">
+  <div class="share__title">Share this:</div>
+  <ul class="share__list list-reset">
+    <li class="share__item">
+      <a class="share__link share__facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://fullymodulated.com/audacity-4-looks-like-a-daw"
+        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+        title="Share on Facebook" rel="nofollow"><i class="fa-brands fa-facebook-f"></i></a>
+    </li>
+    <li class="share__item">
+      <a class="share__link share__twitter"
+        href="https://twitter.com/intent/tweet?text=Audacity%204%20Looks%20Like%20a%20DAW!%20Even%20If%20the%20Developers%20Say%20It%20Isn%E2%80%99t&url=https://fullymodulated.com/audacity-4-looks-like-a-daw"
+        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+        title="Share on Twitter" rel="nofollow"><i class="fa-brands fa-x-twitter"></i></a>
+    </li>
+    <li class="share__item">
+      <a class="share__link share__pinterest" href="http://pinterest.com/pin/create/button/?url=https://fullymodulated.com/audacity-4-looks-like-a-daw&amp;media=https://fullymodulated.comimages/audacity4.png&amp;description=Audacity%204%20Looks%20Like%20a%20DAW!%20Even%20If%20the%20Developers%20Say%20It%20Isn%E2%80%99t"
+      onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;" title="Share on Pinterest"
+      rel="nofollow"><i class="fa-brands fa-pinterest"></i></a>
+    </li>
+    <li class="share__item">
+      <a class="share__link share__linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https://fullymodulated.com/audacity-4-looks-like-a-daw&title=Audacity%204%20Looks%20Like%20a%20DAW!%20Even%20If%20the%20Developers%20Say%20It%20Isn%E2%80%99t&summary=&source="
+      onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn" rel="nofollow"><i class="fa-brands fa-linkedin-in"></i></a>
+    </li>
+  </ul>
+</div>
+      <div class="post__navigation">
+  
+  <div class="post__prev">
+    
+    <a href="/windows10-end-of-support-for-broadcast-stations" class="prev__image">
+      
+      <img class="lazy" data-src="/images/Win10_Deadline.jpg" alt="Audacity 4 Looks Like a DAW! Even If the Developers Say It Isn’t">
+    </a>
+    
+    <div class="prev__box">
+      <span class="post__nav__prev">Older post</span>
+      <h2 class="post__nav__title"><a href="/windows10-end-of-support-for-broadcast-stations">Microsoft Is Killing Windows 10, and That’s a Huge Problem for Broadcasters!</a></h2>
+    </div>
+  </div>
+  
+
+  
+  <div class="post__next">
+    <div class="next__box">
+      <span class="post__nav__next">Newer post</span>
+      <h2 class="post__nav__title"><a href="/charlie-ergen-20-billion-5g-gamble-poker-player-lost-biggest-bet">Charlie Ergen's $20 Billion 5G Gamble! How the Poker Player Lost His Biggest Bet</a></h2>
+    </div>
+    
+    <a href="/charlie-ergen-20-billion-5g-gamble-poker-player-lost-biggest-bet" class="next__image">
+      
+      <div class="video-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+          <polygon points="40,30 70,50 40,70"></polygon>
+        </svg>
+      </div>
+      
+      <img class="lazy" data-src="/images/dish-tower.png" alt="Audacity 4 Looks Like a DAW! Even If the Developers Say It Isn’t">
+    </a>
+    
+  </div>
+  
+</div>
+      
+        <div class="show-comments">
+  
+  <h3 class="show-comments__title">Get On The Air</h3>
+  
+  <button class="button button--primary disqus-button" id="show-comments-button" onclick="disqus();return false;">Show Comments</button>
+</div>
+
+<div id="disqus_thread" class="post__comments">
+  <div id="disqus_empty"></div>
+</div>
+
+<script>
+  var disqus_loaded = false;
+  var disqus_shortname = 'fully-modulated';
+  var disqus_container = document.getElementById("disqus_thread");
+  function disqus() {
+    if (!disqus_loaded) {
+      disqus_loaded = true;
+      var e = document.createElement("script");
+      e.type = "text/javascript";
+      e.async = true;
+      e.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+      (document.getElementsByTagName("head")[0] ||
+        document.getElementsByTagName("body")[0])
+        .appendChild(e);
+      // Hide the button after opening
+      document.getElementById("show-comments-button").style.display = "none";
+      // Show disqus comments
+      disqus_container.classList.add("is-open");
+    }
+  }
+</script>
+
+<noscript>Please enable JavaScript to view the
+  <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+      
+      
+
+
+
+
+
+<div class="related-posts is-related">
+  <div class="section__info">
+    <div class="section__head">
+      <h2 class="section__title">Related</h2>
+    </div>
+  </div>
+  <div class="view-list">
+
+  
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+      <div class="article article--flexible">
+  <div class="article__inner">
+
+    
+    <div class="article__head">
+      
+
+      <a class="article__image" href="/uptime-kuma-for-radio-engineers">
+        <img class="lazy" data-src="/images/uptime-kuma.jpg" alt="How Radio Engineers Can Use Uptime Kuma with Docker to Monitor Stations">
+      </a>
+    </div>
+    
+
+    <div class="article__content">
+
+      
+      <div class="article__tags">
+        
+        <a href="/tags/?tag=tools"
+          class="article__tag" style="background: #009999;">
+          Tools
+        </a>
+        
+      </div>
+      
+
+      <h2 class="article__title">
+        <a href="/uptime-kuma-for-radio-engineers">How Radio Engineers Can Use Uptime Kuma with Docker to Monitor Stations</a>
+      </h2>
+
+      <p class="article__excerpt">Radio engineers live in a world where uptime is everything. A transmitter drops, a microwave link goes dark, or a firewall port gets blocked—and too often yo...</p>
+
+      <div class="article__meta">
+        <time class="article__date" datetime="2025-10-01T09:00:00-05:00">01 Oct, 2025</time>
+        <div class="article__minutes">
+          
+          
+            6 min read
+          
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+    
+        
+      
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+      <div class="article article--flexible">
+  <div class="article__inner">
+
+    
+    <div class="article__head">
+      
+
+      <a class="article__image" href="/uptime-kuma-for-radio-stations">
+        <img class="lazy" data-src="/images/uptime-kuma.jpg" alt="Uptime Kuma! The Open-Source Monitoring Tool Radio Engineers Didn’t Know They Needed">
+      </a>
+    </div>
+    
+
+    <div class="article__content">
+
+      
+      <div class="article__tags">
+        
+        <a href="/tags/?tag=tools"
+          class="article__tag" style="background: #009999;">
+          Tools
+        </a>
+        
+      </div>
+      
+
+      <h2 class="article__title">
+        <a href="/uptime-kuma-for-radio-stations">Uptime Kuma! The Open-Source Monitoring Tool Radio Engineers Didn’t Know They Needed</a>
+      </h2>
+
+      <p class="article__excerpt">Radio stations spend serious money to make sure they never go dark. Dead air isn’t just awkward, it’s expensive. For decades the solution has been purpose-bu...</p>
+
+      <div class="article__meta">
+        <time class="article__date" datetime="2025-09-22T08:00:00-05:00">22 Sep, 2025</time>
+        <div class="article__minutes">
+          
+          
+            2 min read
+          
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+    
+        
+      
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+  </div>
+</div>
+    </div>
+
+    <div class="col col-4 col-d-12">
+      <aside class="sidebar">
+        
+<div class="widget widget-subscribe">
+  <div class="widget-subscribe__content">
+    
+    <h2 class="widget-subscribe__title">Stay Tuned Weekly 📻</h2>
+    
+    
+    <p class="widget-subscribe__description">Every Sunday, I broadcast crisp, high-fidelity tips for leveling up your workflow—straight from the studio to your inbox! Expect exclusive insights on radio tech, behind-the-scenes TV secrets, and hot networking hacks, plus sonic inspiration to keep your signals strong.</p>
+    
+  </div>
+  <form class="widget-subscribe__form validate"
+    action="//fullymodulated.us8.list-manage.com/subscribe/post?u=164510d86f4d3932a4fc37786&amp;id=d9e3b3a2d9&amp" method="POST" id="membedded-subscribe-form" name="membedded-subscribe-form" target="_blank" novalidate>
+    <label class="screen-reader-text" for="mce-EMAIL">Email address</label>
+    <input class="widget-subscribe__email required email" id="mce-EMAIL" type="text" name="EMAIL" placeholder="Your email address...">
+    <button class="button button--secondary button--big widget-subscribe__button" id="membedded-subscribe" type="submit" name="subscribe">Subscribe to the Signal</button>
+  </form>
+</div>
+
+        
+<div class="widget widget-social">
+  <ul class="widget-social__list list-reset">
+    
+    <li class="widget-social__item">
+      <a class="widget-social__link" href="https://podcasts.apple.com/podcast/id1803865840" target="_blank" rel="noopener"
+        aria-label="Apple Podcasts link"><i class="fa-solid fa-podcast"></i></a>
+    </li>
+    
+    <li class="widget-social__item">
+      <a class="widget-social__link" href="https://open.spotify.com/show/3yITnZVToJsnKpU04ma4at" target="_blank" rel="noopener"
+        aria-label="Spotify link"><i class="fa-brands fa-spotify"></i></a>
+    </li>
+    
+    <li class="widget-social__item">
+      <a class="widget-social__link" href="https://www.instagram.com/tylerwoodward.me" target="_blank" rel="noopener"
+        aria-label="Instagram link"><i class="fa-brands fa-instagram"></i></a>
+    </li>
+    
+    <li class="widget-social__item">
+      <a class="widget-social__link" href="https://www.threads.com/@tylerwoodward.me" target="_blank" rel="noopener"
+        aria-label="Threads link"><i class="fa-brands fa-threads"></i></a>
+    </li>
+    
+    <li class="widget-social__item">
+      <a class="widget-social__link" href="https://bsky.app/profile/tylerwoodward.me" target="_blank" rel="noopener"
+        aria-label="Threads link"><i class="fa-brands fa-bluesky"></i></a>
+    </li>
+    
+    <li class="widget-social__item">
+      <a class="widget-social__link" href="feed.xml" target="_blank" rel="noopener"
+        aria-label="RSS link"><i class="fa-solid fa-rss"></i></a>
+    </li>
+    
+  </ul>
+</div>
+
+        
+
+
+
+
+<div class="widget widget-featured-posts">
+  <div class="widget-sidebar-head">
+    <h2 class="widget-sidebar-title">Featured posts</h2>
+  </div>
+  
+    
+    
+    <div class="post-featured-content">
+      
+      <a href="/the-tylerwoodward-project" class="post-featured-image">
+        
+        <img class="lazy" data-src="/images/the-tylerwoodward-project.jpg" alt="The Tyler Woodward Project: A Fresh Name For The Same Curious Tech Brain">
+      </a>
+      
+      <div class="post-featured-meta">
+        <h3 class="post-featured-title"><a href="/the-tylerwoodward-project">The Tyler Woodward Project: A Fresh Name For The Same Curious Tech Brain</a></h3>
+        <time class="post-featured-date" datetime="2025-11-25T23:00:00-06:00">25 Nov, 2025</time>
+      </div>
+    </div>
+    
+  
+
+    
+    
+    <div class="post-featured-content">
+      
+      <a href="/how-fcc-spectrum-auctions-push-broadcasters-toward-internet-first-delivery" class="post-featured-image">
+        
+        <div class="video-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            <polygon points="40,30 70,50 40,70"></polygon>
+          </svg>
+        </div>
+        
+        <img class="lazy" data-src="/images/cband.png" alt="How FCC Spectrum Auctions Push Broadcasters Toward Internet-First Delivery">
+      </a>
+      
+      <div class="post-featured-meta">
+        <h3 class="post-featured-title"><a href="/how-fcc-spectrum-auctions-push-broadcasters-toward-internet-first-delivery">How FCC Spectrum Auctions Push Broadcasters Toward Internet-First Delivery</a></h3>
+        <time class="post-featured-date" datetime="2025-11-23T08:00:00-06:00">23 Nov, 2025</time>
+      </div>
+    </div>
+    
+  
+
+    
+    
+    <div class="post-featured-content">
+      
+      <a href="/am-stereo-lost-legacy" class="post-featured-image">
+        
+        <div class="video-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            <polygon points="40,30 70,50 40,70"></polygon>
+          </svg>
+        </div>
+        
+        <img class="lazy" data-src="/images/am-stereo.png" alt="AM Stereo’s Lost Legacy! Could C-QUAM and the Harris AMS-G1 Have Saved Music on AM?">
+      </a>
+      
+      <div class="post-featured-meta">
+        <h3 class="post-featured-title"><a href="/am-stereo-lost-legacy">AM Stereo’s Lost Legacy! Could C-QUAM and the Harris AMS-G1 Have Saved Music on AM?</a></h3>
+        <time class="post-featured-date" datetime="2025-11-17T06:00:00-06:00">17 Nov, 2025</time>
+      </div>
+    </div>
+    
+  
+
+    
+    
+    <div class="post-featured-content">
+      
+      <a href="/why-siriusxm-sounds-mushy" class="post-featured-image">
+        
+        <div class="video-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            <polygon points="40,30 70,50 40,70"></polygon>
+          </svg>
+        </div>
+        
+        <img class="lazy" data-src="/images/siriusxm-audio-quality.jpg" alt="Why Satellite Radio Sounds Mushy">
+      </a>
+      
+      <div class="post-featured-meta">
+        <h3 class="post-featured-title"><a href="/why-siriusxm-sounds-mushy">Why Satellite Radio Sounds Mushy</a></h3>
+        <time class="post-featured-date" datetime="2025-11-10T05:00:00-06:00">10 Nov, 2025</time>
+      </div>
+    </div>
+    
+  
+
+</div>
+
+
+        
+<div class="widget widget-tags">
+  <div class="widget-sidebar-head">
+    <h2 class="widget-sidebar-title">Topics</h2>
+  </div>
+
+  <div class="tag-cloud">
+    
+      
+      
+      
+
+      
+
+      <a href="/tags/?tag=episodes"
+         class="tag-cloud__item"
+         style="background: #008800;">
+        Episodes
+      </a>
+    
+      
+      
+      
+
+      
+
+      <a href="/tags/?tag=tools"
+         class="tag-cloud__item"
+         style="background: #009999;">
+        Tools
+      </a>
+    
+      
+      
+      
+
+      
+
+      <a href="/tags/?tag=industry"
+         class="tag-cloud__item"
+         style="background: #000099;">
+        Industry
+      </a>
+    
+      
+      
+      
+
+      
+
+      <a href="/tags/?tag=engineering"
+         class="tag-cloud__item"
+         style="background: #444444;">
+        Engineering
+      </a>
+    
+      
+      
+      
+
+      
+
+      <a href="/tags/?tag=blog"
+         class="tag-cloud__item"
+         style="background: #C00000;">
+        Blog
+      </a>
+    
+  </div>
+</div>
+
+      </aside>
+    </div>
+  </div>
+</div>
+<!-- end post -->
+    </main>
+    <!-- end content -->
+
+    <!-- begin footer -->
+<footer class="footer">
+
+  <div class="footer__inner">
+    <div class="container">
+      <div class="row">
+
+        <div class="col col-4 col-d-12">
+          <a href="/"><img src="/logo.png" width="255px" border="0"></a>
+          <h3 class="footer__info__title"></h3>
+          
+          <p class="footer__info__description">A broadcast network engineer, exploring broadcasting, cybersecurity, data privacy, telecommunications, and tech on The Tyler Woodward Project.</p>
+          
+          
+          <div class="footer__social">
+            <ul class="footer__social__list list-reset">
+              
+              <li class="footer__social__item">
+                <a class="footer__social__link" href="https://podcasts.apple.com/podcast/id1803865840" target="_blank" rel="noopener"
+                  aria-label="Apple Podcasts link"><i class="fa-solid fa-podcast"></i></a>
+              </li>
+              
+              <li class="footer__social__item">
+                <a class="footer__social__link" href="https://open.spotify.com/show/3yITnZVToJsnKpU04ma4at" target="_blank" rel="noopener"
+                  aria-label="Spotify link"><i class="fa-brands fa-spotify"></i></a>
+              </li>
+              
+              <li class="footer__social__item">
+                <a class="footer__social__link" href="https://www.instagram.com/tylerwoodward.me" target="_blank" rel="noopener"
+                  aria-label="Instagram link"><i class="fa-brands fa-instagram"></i></a>
+              </li>
+              
+              <li class="footer__social__item">
+                <a class="footer__social__link" href="https://www.threads.com/@tylerwoodward.me" target="_blank" rel="noopener"
+                  aria-label="Threads link"><i class="fa-brands fa-threads"></i></a>
+              </li>
+              
+              <li class="footer__social__item">
+                <a class="footer__social__link" href="https://bsky.app/profile/tylerwoodward.me" target="_blank" rel="noopener"
+                  aria-label="Threads link"><i class="fa-brands fa-bluesky"></i></a>
+              </li>
+              
+              <li class="footer__social__item">
+                <a class="footer__social__link" href="feed.xml" target="_blank" rel="noopener"
+                  aria-label="RSS link"><i class="fa-solid fa-rss"></i></a>
+              </li>
+              
+            </ul>
+          </div>
+          
+        </div>
+
+        <div class="col col-4 col-d-12">
+          <h3 class="footer__title">Recent Posts</h3>
+          <div class="footer__recent-posts">
+            
+            <div class="footer__recent-content">
+              
+              <a href="/turkey-transmitters-and-thanks" class="footer__recent-image">
+                
+                <img class="lazy" data-src="/images/turkey-transmitters-thanks.png" alt="Turkey, Transmitters, And Thanks">
+              </a>
+              
+              <div class="footer__recent-meta">
+                <h3 class="footer__recent-title"><a href="/turkey-transmitters-and-thanks">Turkey, Transmitters, And Thanks</a></h3>
+                <time class="footer__recent-date" datetime="2025-11-26T07:00:00-06:00">26 Nov, 2025</time>
+              </div>
+            </div>
+            
+            <div class="footer__recent-content">
+              
+              <a href="/the-tylerwoodward-project" class="footer__recent-image">
+                
+                <img class="lazy" data-src="/images/the-tylerwoodward-project.jpg" alt="The Tyler Woodward Project: A Fresh Name For The Same Curious Tech Brain">
+              </a>
+              
+              <div class="footer__recent-meta">
+                <h3 class="footer__recent-title"><a href="/the-tylerwoodward-project">The Tyler Woodward Project: A Fresh Name For The Same Curious Tech Brain</a></h3>
+                <time class="footer__recent-date" datetime="2025-11-25T23:00:00-06:00">25 Nov, 2025</time>
+              </div>
+            </div>
+            
+            <div class="footer__recent-content">
+              
+              <a href="/how-fcc-spectrum-auctions-push-broadcasters-toward-internet-first-delivery" class="footer__recent-image">
+                
+                <div class="video-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                    <polygon points="40,30 70,50 40,70"></polygon>
+                  </svg>
+                </div>
+                
+                <img class="lazy" data-src="/images/cband.png" alt="How FCC Spectrum Auctions Push Broadcasters Toward Internet-First Delivery">
+              </a>
+              
+              <div class="footer__recent-meta">
+                <h3 class="footer__recent-title"><a href="/how-fcc-spectrum-auctions-push-broadcasters-toward-internet-first-delivery">How FCC Spectrum Auctions Push Broadcasters Toward Internet-First Delivery</a></h3>
+                <time class="footer__recent-date" datetime="2025-11-23T08:00:00-06:00">23 Nov, 2025</time>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+        
+        <div class="col col-2 col-d-6 col-m-12">
+          <div class="footer-nav__left">
+            <h3 class="footer__title">Menu</h3>
+            <div class="footer-nav__list">
+            
+            
+              <a class="footer-nav__link" href="/">Home</a>
+            
+            
+            
+              <a class="footer-nav__link" href="/tags/?tag=episodes">Episodes</a>
+            
+            
+            
+              <a class="footer-nav__link" href="/tags/?tag=blog">Blog</a>
+            
+            
+            
+              <a class="footer-nav__link" href="/archive/">Archive</a>
+            
+            
+            
+            
+            
+            </div>
+          </div>
+        </div>
+        
+
+        
+        
+
+        
+        <div class="col col-2 col-d-6 col-m-12">
+          <div class="footer-nav__right">
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <h3 class="footer__title">Pages</h3>
+            <div class="footer-nav__list">
+              
+                <a class="footer-nav__link" href="/about/">About</a>
+              
+                <a class="footer-nav__link" href="/contact/">Contact</a>
+              
+            </div>
+            
+            
+          </div>
+        </div>
+        
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <div class="copyright">&copy;2025 <a href="/">Fully Modulated</a>, Some Rights Reserved.<BR><B>Made with human creativity and machine magic.</B><BR>All views expressed are my own and do not reflect the views of my employer or any radio or TV stations.</div>
+      </div>
+    </div>
+  </div>
+
+</footer>
+<!-- end footer -->
+  </div>
+  <!-- end global wrap -->
+
+  <div class="top" title="Top"><i class="fa-solid fa-arrow-up"></i></div>
+
+  <div class="images-overlay"></div>
+
+  <script src="/js/scripts.js"></script>
+  <script src="/js/common.js"></script>
+</body>
+
+</html>

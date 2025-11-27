@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Why Microsoft's Windows Update Process Is a Time Sink for Broadcast Engineers</title>
+  <meta name='description' content='Microsoft's chaotic Windows Update system wastes valuable time for broadcast engineers. Add forced obsolescence through TPM requirements, and it's a disaster.'>
+
+  <link rel="canonical" href="https://fullymodulated.com/windows-update-nightmare">
+  <link rel="alternate" type="application/rss+xml" title="" href="/feed.xml">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Why Microsoft's Windows Update Process Is a Time Sink for Broadcast Engineers – Fully Modulated">
+  <meta name="twitter:description" content="Microsoft&apos;s chaotic Windows Update system wastes valuable time for broadcast engineers. Add forced obsolescence through TPM requirements, and it&apos;s a disaster.">
+  <meta name="twitter:image:src" content="https://fullymodulated.com/images/windows-update-nightmare.jpg">
+  <meta name="twitter:image:src" content="https://fullymodulated.com/images/windows-update-nightmare.jpg">
+
+  <!-- Facebook OpenGraph -->
+  <meta property="og:url" content="https://fullymodulated.com/windows-update-nightmare">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Why Microsoft's Windows Update Process Is a Time Sink for Broadcast Engineers – Fully Modulated">
+  <meta property="og:description" content="Microsoft&apos;s chaotic Windows Update system wastes valuable time for broadcast engineers. Add forced obsolescence through TPM requirements, and it&apos;s a disaster.">
+  <meta property="og:image" content="https://fullymodulated.com/images/windows-update-nightmare.jpg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+
+  <script>
+    const defaultTheme = "dark";
+    const isToggleEnabled = false;
+    const userTheme = localStorage.getItem("theme");
+
+    function setTheme(mode) {
+      if (mode === "dark") {
+        document.documentElement.setAttribute("dark", "");
+        document.documentElement.classList.add("dark-mode");
+      } else if (mode === "light") {
+        document.documentElement.removeAttribute("dark");
+        document.documentElement.classList.remove("dark-mode");
+      }
+    }
+
+    if (isToggleEnabled) {
+      if (userTheme) {
+        setTheme(userTheme);
+      } else {
+        setTheme(defaultTheme);
+      }
+    } else {
+      setTheme(defaultTheme);
+    }
+
+    if (localStorage.getItem("classView") === "list") {
+      document.documentElement.setAttribute("list", "");
+      document.documentElement.classList.add('view-list');
+    }
+  </script>
+
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+
+  
+
+  <!-- begin global wrap -->
+  <div class="global-wrap">
+    <!-- begin header -->
+<header class="header">
+  <div class="container-big">
+    <div class="row">
+      <div class="header__inner col col-12">
+
+        <div class="logo">
+          <a class="logo__link" href="/">
+          
+          <img class="logo__image" src="/logo.png" alt="Fully Modulated">
+          <img class="logo__image__dark" src="/logo.png" alt="Fully Modulated">
+          
+          </a>
+        </div>
+
+        <div class="hamburger">
+          <div></div>
+        </div>
+
+        <nav class="main-nav" aria-label="Main menu">
+          <div class="main-nav__box">
+            <ul class="nav__list list-reset">
+              
+              
+              <li class="nav__item">
+                <a href="/" class="nav__link">Home</a>
+              </li>
+              
+              
+              
+              <li class="nav__item">
+                <a href="/tags/?tag=episodes" class="nav__link">Episodes</a>
+              </li>
+              
+              
+              
+              <li class="nav__item">
+                <a href="/tags/?tag=blog" class="nav__link">Blog</a>
+              </li>
+              
+              
+              
+              <li class="nav__item">
+                <a href="/archive/" class="nav__link">Archive</a>
+              </li>
+              
+              
+              
+              <li class="nav__item dropdown">
+                <div class="dropdown-toggle">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="4" fill="none">
+                    <circle cx="2" cy="2" r="2" fill="var(--link-color)"/>
+                    <circle cx="10" cy="2" r="2" fill="var(--link-color)"/>
+                    <circle cx="18" cy="2" r="2" fill="var(--link-color)"/>
+                  </svg>
+                </div>
+                <div class="dropdown-menu">
+                  
+                  <a href="/about/" class="nav__link">About</a>
+                  
+                  <a href="/contact/" class="nav__link">Contact</a>
+                  
+                </div>
+              </li>
+              
+              
+            </ul>
+          </div>
+        </nav>
+
+        <div class="nav-button">
+          
+          <div class="search-button">
+            <svg class="search-button__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M338.29 338.29L448 448"/></svg>
+            <span class="search-button__text">Search posts...</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</header>
+<!-- end header -->
+
+<!-- begin search -->
+<div class="search">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <div class="search__box">
+          <div class="search__group">
+            <i class="search__close fa-solid fa-xmark"></i>
+            <label for="js-search-input" class="screen-reader-text">Search for Blog</label>
+            <input type="text" id="js-search-input" class="search__text" autocomplete="off"
+              placeholder="Type to search...">
+          </div>
+          <div class="search-results-list view-list" id="js-results-container"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="search__overlay"></div>
+</div>
+<!-- end search -->
+
+    <!-- begin content -->
+    <main class="content" aria-label="Content">
+      <!-- begin post -->
+<div class="container">
+
+  <div class="row">
+    <div class="col col-8 col-d-12">
+
+      <div class="post-head">
+
+        
+        
+        <div class="post-image">
+          <img class="lazy" data-src="/images/windows-update-nightmare.jpg" alt="Why Microsoft's Windows Update Process Is a Time Sink for Broadcast Engineers">
+        </div>
+        
+        
+
+        <div class="post-info">
+          
+          <div class="post-tags">
+            
+            <a href="/tags/?tag=engineering" class="post-tag"
+              style="background: #444444;">Engineering</a>
+            
+          </div>
+          
+
+          <h1 class="post-title">Why Microsoft&#39;s Windows Update Process Is a Time Sink for Broadcast Engineers</h1>
+
+          <div class="post-meta">
+            <a href="/about/" class="post-meta__image">
+              <img class="lazy" data-src="/images/tyler_profile.jpg"
+                alt="Tyler Woodward">
+            </a>
+
+            <div class="post-meta__content">
+              <a class="post-meta__author" href="/about/">Tyler Woodward</a>
+              <div class="post-meta__bottom">
+                <time class="post-date" datetime="2025-11-01T08:00:00-05:00">01 Nov, 2025</time> –
+                <span class="post-minutes">
+                  
+                   8 min read  </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <article class="post">
+        <div class="post__content">
+          
+          <div class="post__toc">
+            <h2 class="post__toc__title">Table of Contents</h2>
+            <ol class="post__toc__list"><li><a href="#the-update-process-shouldnt-be-this-hard">The Update Process Shouldn’t Be This Hard</a></li><li><a href="#the-broadcast-station-ripple-effect">The Broadcast Station Ripple Effect</a></li><li><a href="#microsoft-keeps-breaking-things">Microsoft Keeps Breaking Things</a></li><li><a href="#the-command-line-gauntlet">The Command Line Gauntlet</a></li><li><a href="#registry-hacks-and-workarounds">Registry Hacks and Workarounds</a></li><li><a href="#the-forced-obsolescence-problem">The Forced Obsolescence Problem</a></li><li><a href="#what-stations-can-do">What Stations Can Do</a></li><li><a href="#the-bigger-picture">The Bigger Picture</a></li></ol>
+          </div>
+          
+
+          <p>If you’re a broadcast engineer pulling double duty as IT support, you already know the drill. You walk into the station planning to work on transmitter maintenance or optimize your STL link. Instead, you spend three hours troubleshooting why a workstation won’t finish installing updates, or worse, why an automation system won’t boot after an overnight update went sideways.</p>
+
+<p>Microsoft’s Windows Update process has become one of the most frustrating aspects of managing broadcast technology infrastructure. For engineers at smaller stations who wear multiple hats, it’s not just annoying. It’s a massive time sink that pulls you away from the work that actually keeps your station on the air.</p>
+
+<h2 id="the-update-process-shouldnt-be-this-hard">The Update Process Shouldn’t Be This Hard</h2>
+
+<p>When <a href="https://support.microsoft.com/en-us/windows/troubleshoot-problems-updating-windows-188c2b0f-10a7-d72f-65b8-32d177eb136c">Windows Update</a> works, it’s invisible. But when it doesn’t, you’re stuck running command line tools like DISM and SFC, clearing update caches, stopping and restarting services, editing registry keys, and maybe even performing an in-place upgrade just to restore functionality.</p>
+
+<p><a href="https://support.microsoft.com/en-us/windows/troubleshoot-problems-updating-windows-188c2b0f-10a7-d72f-65b8-32d177eb136c">Microsoft’s official troubleshooting guide</a> lists dozens of potential error codes. Each one represents a path down the rabbit hole. Is it corrupted files? Permission issues? Insufficient disk space? A conflict with third-party software? Maybe the Windows Update service itself is broken.</p>
+
+<p>Recent updates have made things worse. In October 2025, <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-0x800f081f-errors-causing-windows-update-failures/">Microsoft acknowledged</a> that the KB5050094 update was causing 0x800F081F errors due to missing language packs. The fix required either another patch or an in-place upgrade using Windows installation media.</p>
+
+<p>Earlier this year, the August 2025 security updates broke <a href="https://www.tomshardware.com/software/windows/microsofts-august-2025-security-updates-are-breaking-recovery-tools-on-windows-10-and-windows-11-pcs">Windows reset and recovery tools</a> on nearly every supported version of Windows 10 and Windows 11. Users attempting to use the “Reset this PC” feature found that the process would start and then immediately roll back. Microsoft released an emergency out-of-band patch, but by then the damage was done.</p>
+
+<h2 id="the-broadcast-station-ripple-effect">The Broadcast Station Ripple Effect</h2>
+
+<p>For a single engineer managing the IT stack at a radio or TV station, these failures are more than technical headaches. They’re operational emergencies.</p>
+
+<p>A workstation that won’t complete updates becomes unreliable. It might freeze unexpectedly. It might fail to boot. And if that workstation runs something critical, like traffic software, <a href="https://www.boisestate.edu/hrs-job-levels-job-standards/job-standard-for-broadcast-engineer/">automation systems</a>, or playout control, you’ve got dead air risk.</p>
+
+<p>The same goes for studio systems. Modern broadcast operations are built on <a href="https://fullymodulated.com/posts/uptime-kuma-for-radio-engineers/">IP-based infrastructure</a>. STL links run over IP. Automation talks to the network. Even transmitter monitoring is web-based. When Windows decides it’s time to install updates at 3 a.m. and something goes wrong, you find out when you get a call that the station is off the air.</p>
+
+<p><a href="https://help.broadcastradio.com/support/solutions/articles/101000535053-temporarily-pausing-windows-10-updates">Broadcast Radio’s support documentation</a> explicitly warns about the risks. Updates can redetect hardware, reinstall drivers with default settings, or enable features like Audio Enhancements that break soundcard performance. And if an update is already installed and waiting for a reboot, leaving the system in that state for days can cause severe instability.</p>
+
+<h2 id="microsoft-keeps-breaking-things">Microsoft Keeps Breaking Things</h2>
+
+<p>The pattern has become predictable. Microsoft releases a cumulative update. Within days or weeks, widespread reports emerge of failures. The company acknowledges the issue. Then it releases either another patch or a registry workaround.</p>
+
+<p>In August 2025, <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-streaming-issues-triggered-by-windows-updates/">Windows updates caused severe stuttering and lag</a> with NDI streaming software. This impacted broadcasters using <a href="https://obsproject.com/">OBS</a> and other tools for remote production. Microsoft initially suggested a workaround involving NDI transport protocol changes. A fix didn’t arrive until September.</p>
+
+<p>Also in August, <a href="https://learn.microsoft.com/en-us/windows/release-health/status-windows-server-2025">smartcard authentication failures</a> followed the October 2025 update. Systems using CSP-based RSA certificates suddenly couldn’t authenticate. Microsoft deployed a Known Issue Rollback to resolve it.</p>
+
+<p>October brought more chaos. The KB5066835 update <a href="https://www.forbes.com/sites/daveywinder/2025/10/26/act-now---microsoft-issues-emergency-windows-update-as-attacks-begin/">broke WinRE recovery tools</a>, leaving USB keyboards and mice completely nonfunctional in the recovery environment. It also caused localhost connection failures that rendered some systems essentially unusable. Microsoft issued KB5070773 as an emergency fix.</p>
+
+<p>These aren’t minor bugs. They’re core functionality failures that Microsoft’s own testing should have caught.</p>
+
+<h2 id="the-command-line-gauntlet">The Command Line Gauntlet</h2>
+
+<p>When updates fail, you end up at the command line. The standard fix workflow looks like this. Open Command Prompt as administrator. Stop the Windows Update service, BITS, Cryptographic Services, and MSI Installer. Rename the SoftwareDistribution and catroot2 folders. Restart the services. Run DISM with <code class="language-plaintext highlighter-rouge">/Online /Cleanup-Image /RestoreHealth</code>. Run SFC with <code class="language-plaintext highlighter-rouge">/scannow</code>. Reboot. Try the update again.</p>
+
+<p>Maybe it works. Maybe it doesn’t. If it doesn’t, you start digging through CBS.log to identify corrupted files, download the specific cumulative update from the <a href="https://www.catalog.update.microsoft.com/">Microsoft Update Catalog</a>, extract the .msu and .cab files, manually copy missing files into a source folder, and run DISM again with the <code class="language-plaintext highlighter-rouge">/Source</code> parameter.</p>
+
+<p>This is not an exaggeration. <a href="https://learn.microsoft.com/en-us/troubleshoot/windows-server/installing-updates-features-roles/fix-windows-update-errors">Microsoft’s own documentation</a> describes this exact process as the fix for Windows Update corruptions.</p>
+
+<p>For a broadcast engineer who needs to be at a transmitter site, this kind of troubleshooting is a productivity killer. You’re not improving infrastructure. You’re fighting with an update system that should be invisible.</p>
+
+<h2 id="registry-hacks-and-workarounds">Registry Hacks and Workarounds</h2>
+
+<p>Sometimes the fix involves editing the registry. To manually unpause Windows updates without triggering automatic downloads, you edit <code class="language-plaintext highlighter-rouge">HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UpdatePolicy\Settings</code> and change <code class="language-plaintext highlighter-rouge">PausedFeatureStatus</code> and <code class="language-plaintext highlighter-rouge">PausedQualityStatus</code> to 0. Then you delete five time-related entries in <code class="language-plaintext highlighter-rouge">HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings</code>.</p>
+
+<p>Want to force a manual update check from the command line? That’s not straightforward either. You can trigger <code class="language-plaintext highlighter-rouge">w32tm /resync</code> for time updates or use PowerShell modules like <code class="language-plaintext highlighter-rouge">PSWindowsUpdate</code>, but there’s no single, reliable built-in command to force an update scan without also triggering automatic installation.</p>
+
+<p>These workarounds exist because Microsoft’s update system is opaque and doesn’t give users enough control. The system assumes it knows best. When it doesn’t, you’re stuck digging through <a href="https://www.askwoody.com/forums/topic/how-to-unpause-windows-updates-without-using-the-resume-updates-button/">community forums</a> and <a href="https://www.reddit.com/r/Windows10/comments/lp8o6g/command_line_to_triggerforce_a_windows_update/">Reddit threads</a> for solutions.</p>
+
+<h2 id="the-forced-obsolescence-problem">The Forced Obsolescence Problem</h2>
+
+<p>Now layer on Microsoft’s hardware requirements for <a href="https://www.microsoft.com/en-us/windows/windows-11-specifications">Windows 11</a>. The operating system requires <a href="https://support.microsoft.com/en-us/windows/enable-tpm-2-0-on-your-pc-1fd5a332-360d-4f46-a1e7-ae6b0c90645c">TPM 2.0</a>, Secure Boot, and a CPU from Intel’s 8th generation or AMD’s Ryzen 2000 series or newer.</p>
+
+<p><a href="https://learn.microsoft.com/en-us/lifecycle/products/windows-10-home-and-pro">Windows 10 support ended</a> on October 14, 2025. Machines that don’t meet Windows 11’s requirements are now officially unsupported. That includes millions of perfectly functional computers with 7th-gen Intel processors, older Ryzen chips, or motherboards without firmware TPM support.</p>
+
+<p>For broadcast stations running older but stable hardware, this is a disaster. A Dell workstation from 2016 with a Skylake i7 processor can run Windows 10 flawlessly. It handles automation, playout, and office tasks without issue. But Microsoft says it’s obsolete.</p>
+
+<p>Critics, including <a href="https://www.youtube.com/watch?v=dGj0rVZGfuk">former Microsoft engineers</a>, have called out the arbitrary nature of these requirements. While TPM 2.0 and Secure Boot provide security benefits, the CPU restrictions are less defensible. Older chips can run Windows 11 fine in terms of performance. Microsoft excludes them to reduce driver support complexity and push hardware-based security features, but the practical result is forced obsolescence.</p>
+
+<p>The environmental impact is staggering. Microsoft is <a href="https://learn.microsoft.com/en-us/answers/questions/3932394/windows-11-arbitrary-restrictions-and-environmenta">contributing to e-waste</a> by forcing users to discard functional hardware. Guillaume Pitron and other experts have documented the resource scarcity and environmental toll of mining rare earth metals for electronics. Making millions of working computers “obsolete” accelerates that damage.</p>
+
+<h2 id="what-stations-can-do">What Stations Can Do</h2>
+
+<p>If you’re managing Windows systems at a broadcast facility, here’s what actually works.</p>
+
+<p><strong>Pause updates aggressively.</strong> Use <a href="https://learn.microsoft.com/en-us/windows/deployment/update/waas-configure-wufb">Group Policy</a> or registry tweaks to delay feature updates and control when quality updates install. Schedule updates during off-peak hours, and never let them auto-install during critical dayparts.</p>
+
+<p><strong>Test updates on non-critical systems first.</strong> Don’t deploy the latest cumulative update to your automation server the day it drops. Wait a week. Let other people find the bugs. Check <a href="https://www.bleepingcomputer.com/">BleepingComputer</a> and <a href="https://www.theregister.com/">The Register</a> for reports of widespread issues.</p>
+
+<p><strong>Keep offline installers and bootable media ready.</strong> Download cumulative updates from the Microsoft Update Catalog and store them locally. Have a Windows 10 or Windows 11 USB installer on hand for in-place upgrades when the update system completely breaks.</p>
+
+<p><strong>Document your workarounds.</strong> When you find a fix, write it down. Build a runbook for common Windows Update failures specific to your environment. You’ll need it again.</p>
+
+<p><strong>Consider alternatives for critical systems.</strong> If possible, run automation and playout on dedicated hardware with tightly controlled update policies. Some stations keep critical systems on <a href="https://learn.microsoft.com/en-us/lifecycle/products/windows-10-home-and-pro">LTSC editions</a> of Windows that receive far fewer updates.</p>
+
+<h2 id="the-bigger-picture">The Bigger Picture</h2>
+
+<p>Microsoft’s update process isn’t just inconvenient. It’s a fundamental design failure that wastes time, breaks systems, and forces expensive hardware upgrades on functional machines.</p>
+
+<p>For a broadcast engineer juggling transmitter maintenance, network optimization, and day-to-day IT support, Windows Update failures can easily consume days of work per year. That’s time you’re not spending improving infrastructure, upgrading facilities, or solving real problems.</p>
+
+<p>The forced obsolescence through TPM and CPU requirements makes it worse. Stations running perfectly good hardware are now stuck choosing between paying Microsoft for <a href="https://www.engadget.com/computing/microsoft-has-ended-windows-10-support-but-heres-how-to-get-an-extra-year-for-free-125118044.html">Extended Security Updates</a>, upgrading to Windows 11 on unsupported hardware using <a href="https://www.tomshardware.com/how-to/bypass-windows-11-tpm-requirement">registry hacks</a>, or replacing thousands of dollars worth of equipment that still works fine.</p>
+
+<p>It shouldn’t be this hard. An update system should be reliable, predictable, and transparent. Microsoft’s isn’t. Until that changes, broadcast engineers will keep spending too much time fighting with Windows instead of doing the work that matters.</p>
+
+        </div>
+      </article>
+
+      <div class="share">
+  <div class="share__title">Share this:</div>
+  <ul class="share__list list-reset">
+    <li class="share__item">
+      <a class="share__link share__facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://fullymodulated.com/windows-update-nightmare"
+        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+        title="Share on Facebook" rel="nofollow"><i class="fa-brands fa-facebook-f"></i></a>
+    </li>
+    <li class="share__item">
+      <a class="share__link share__twitter"
+        href="https://twitter.com/intent/tweet?text=Why%20Microsoft's%20Windows%20Update%20Process%20Is%20a%20Time%20Sink%20for%20Broadcast%20Engineers&url=https://fullymodulated.com/windows-update-nightmare"
+        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+        title="Share on Twitter" rel="nofollow"><i class="fa-brands fa-x-twitter"></i></a>
+    </li>
+    <li class="share__item">
+      <a class="share__link share__pinterest" href="http://pinterest.com/pin/create/button/?url=https://fullymodulated.com/windows-update-nightmare&amp;media=https://fullymodulated.comimages/windows-update-nightmare.jpg&amp;description=Why%20Microsoft's%20Windows%20Update%20Process%20Is%20a%20Time%20Sink%20for%20Broadcast%20Engineers"
+      onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;" title="Share on Pinterest"
+      rel="nofollow"><i class="fa-brands fa-pinterest"></i></a>
+    </li>
+    <li class="share__item">
+      <a class="share__link share__linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https://fullymodulated.com/windows-update-nightmare&title=Why%20Microsoft's%20Windows%20Update%20Process%20Is%20a%20Time%20Sink%20for%20Broadcast%20Engineers&summary=Microsoft's%20chaotic%20Windows%20Update%20system%20wastes%20valuable%20time%20for%20broadcast%20engineers.%20Add%20forced%20obsolescence%20through%20TPM%20requirements,%20and%20it's%20a%20disaster.&source="
+      onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn" rel="nofollow"><i class="fa-brands fa-linkedin-in"></i></a>
+    </li>
+  </ul>
+</div>
+      <div class="post__navigation">
+  
+  <div class="post__prev">
+    
+    <a href="/knac-relaunch-halloween" class="prev__image">
+      
+      <img class="lazy" data-src="/images/knac-relaunch-halloween.jpg" alt="Why Microsoft's Windows Update Process Is a Time Sink for Broadcast Engineers">
+    </a>
+    
+    <div class="prev__box">
+      <span class="post__nav__prev">Older post</span>
+      <h2 class="post__nav__title"><a href="/knac-relaunch-halloween">KNAC Returns: Legendary Rock Station Relaunches in California's High Desert</a></h2>
+    </div>
+  </div>
+  
+
+  
+  <div class="post__next">
+    <div class="next__box">
+      <span class="post__nav__next">Newer post</span>
+      <h2 class="post__nav__title"><a href="/barix-codec-security">How to Protect Barix Audio Codecs from Radio Broadcast Hijacking</a></h2>
+    </div>
+    
+    <a href="/barix-codec-security" class="next__image">
+      
+      <div class="video-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+          <polygon points="40,30 70,50 40,70"></polygon>
+        </svg>
+      </div>
+      
+      <img class="lazy" data-src="/images/barix-hijacking.jpg" alt="Why Microsoft's Windows Update Process Is a Time Sink for Broadcast Engineers">
+    </a>
+    
+  </div>
+  
+</div>
+      
+        <div class="show-comments">
+  
+  <h3 class="show-comments__title">Get On The Air</h3>
+  
+  <button class="button button--primary disqus-button" id="show-comments-button" onclick="disqus();return false;">Show Comments</button>
+</div>
+
+<div id="disqus_thread" class="post__comments">
+  <div id="disqus_empty"></div>
+</div>
+
+<script>
+  var disqus_loaded = false;
+  var disqus_shortname = 'fully-modulated';
+  var disqus_container = document.getElementById("disqus_thread");
+  function disqus() {
+    if (!disqus_loaded) {
+      disqus_loaded = true;
+      var e = document.createElement("script");
+      e.type = "text/javascript";
+      e.async = true;
+      e.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+      (document.getElementsByTagName("head")[0] ||
+        document.getElementsByTagName("body")[0])
+        .appendChild(e);
+      // Hide the button after opening
+      document.getElementById("show-comments-button").style.display = "none";
+      // Show disqus comments
+      disqus_container.classList.add("is-open");
+    }
+  }
+</script>
+
+<noscript>Please enable JavaScript to view the
+  <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+      
+      
+
+
+
+
+
+<div class="related-posts is-related">
+  <div class="section__info">
+    <div class="section__head">
+      <h2 class="section__title">Related</h2>
+    </div>
+  </div>
+  <div class="view-list">
+
+  
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+      <div class="article article--flexible">
+  <div class="article__inner">
+
+    
+    <div class="article__head">
+      
+
+      <a class="article__image" href="/tunwall-radio-closing-down">
+        <img class="lazy" data-src="/images/tunwall-trc1n.png" alt="Tunwall Radio: A Lasting Legacy in Broadcast Engineering">
+      </a>
+    </div>
+    
+
+    <div class="article__content">
+
+      
+      <div class="article__tags">
+        
+        <a href="/tags/?tag=engineering"
+          class="article__tag" style="background: #444444;">
+          Engineering
+        </a>
+        
+      </div>
+      
+
+      <h2 class="article__title">
+        <a href="/tunwall-radio-closing-down">Tunwall Radio: A Lasting Legacy in Broadcast Engineering</a>
+      </h2>
+
+      <p class="article__excerpt">Tunwall Radio will close following Steve & Leslie Tunwall's retirement, leaving a legacy of innovation and heartfelt engineering for FM, AM, and TV transmitters across North America—including a custom solution with cable routing, PLC and SNMP for our own stations.</p>
+
+      <div class="article__meta">
+        <time class="article__date" datetime="2025-11-09T07:00:00-06:00">09 Nov, 2025</time>
+        <div class="article__minutes">
+          
+          
+            1 min read
+          
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+    
+        
+      
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+      <div class="article article--flexible">
+  <div class="article__inner">
+
+    
+    <div class="article__head">
+      
+
+      <a class="article__image" href="/windows10-end-of-support-for-broadcast-stations">
+        <img class="lazy" data-src="/images/Win10_Deadline.jpg" alt="Microsoft Is Killing Windows 10, and That’s a Huge Problem for Broadcasters!">
+      </a>
+    </div>
+    
+
+    <div class="article__content">
+
+      
+      <div class="article__tags">
+        
+        <a href="/tags/?tag=engineering"
+          class="article__tag" style="background: #444444;">
+          Engineering
+        </a>
+        
+      </div>
+      
+
+      <h2 class="article__title">
+        <a href="/windows10-end-of-support-for-broadcast-stations">Microsoft Is Killing Windows 10, and That’s a Huge Problem for Broadcasters!</a>
+      </h2>
+
+      <p class="article__excerpt">Windows 10 support officially ends on October 14, 2025. For radio and TV stations, that is not just an IT problem. It is a potential on-air disaster waiting to happen.</p>
+
+      <div class="article__meta">
+        <time class="article__date" datetime="2025-10-07T08:00:00-05:00">07 Oct, 2025</time>
+        <div class="article__minutes">
+          
+          
+            6 min read
+          
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+    
+        
+      
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+  </div>
+</div>
+    </div>
+
+    <div class="col col-4 col-d-12">
+      <aside class="sidebar">
+        
+<div class="widget widget-subscribe">
+  <div class="widget-subscribe__content">
+    
+    <h2 class="widget-subscribe__title">Stay Tuned Weekly 📻</h2>
+    
+    
+    <p class="widget-subscribe__description">Every Sunday, I broadcast crisp, high-fidelity tips for leveling up your workflow—straight from the studio to your inbox! Expect exclusive insights on radio tech, behind-the-scenes TV secrets, and hot networking hacks, plus sonic inspiration to keep your signals strong.</p>
+    
+  </div>
+  <form class="widget-subscribe__form validate"
+    action="//fullymodulated.us8.list-manage.com/subscribe/post?u=164510d86f4d3932a4fc37786&amp;id=d9e3b3a2d9&amp" method="POST" id="membedded-subscribe-form" name="membedded-subscribe-form" target="_blank" novalidate>
+    <label class="screen-reader-text" for="mce-EMAIL">Email address</label>
+    <input class="widget-subscribe__email required email" id="mce-EMAIL" type="text" name="EMAIL" placeholder="Your email address...">
+    <button class="button button--secondary button--big widget-subscribe__button" id="membedded-subscribe" type="submit" name="subscribe">Subscribe to the Signal</button>
+  </form>
+</div>
+
+        
+<div class="widget widget-social">
+  <ul class="widget-social__list list-reset">
+    
+    <li class="widget-social__item">
+      <a class="widget-social__link" href="https://podcasts.apple.com/podcast/id1803865840" target="_blank" rel="noopener"
+        aria-label="Apple Podcasts link"><i class="fa-solid fa-podcast"></i></a>
+    </li>
+    
+    <li class="widget-social__item">
+      <a class="widget-social__link" href="https://open.spotify.com/show/3yITnZVToJsnKpU04ma4at" target="_blank" rel="noopener"
+        aria-label="Spotify link"><i class="fa-brands fa-spotify"></i></a>
+    </li>
+    
+    <li class="widget-social__item">
+      <a class="widget-social__link" href="https://www.instagram.com/tylerwoodward.me" target="_blank" rel="noopener"
+        aria-label="Instagram link"><i class="fa-brands fa-instagram"></i></a>
+    </li>
+    
+    <li class="widget-social__item">
+      <a class="widget-social__link" href="https://www.threads.com/@tylerwoodward.me" target="_blank" rel="noopener"
+        aria-label="Threads link"><i class="fa-brands fa-threads"></i></a>
+    </li>
+    
+    <li class="widget-social__item">
+      <a class="widget-social__link" href="https://bsky.app/profile/tylerwoodward.me" target="_blank" rel="noopener"
+        aria-label="Threads link"><i class="fa-brands fa-bluesky"></i></a>
+    </li>
+    
+    <li class="widget-social__item">
+      <a class="widget-social__link" href="feed.xml" target="_blank" rel="noopener"
+        aria-label="RSS link"><i class="fa-solid fa-rss"></i></a>
+    </li>
+    
+  </ul>
+</div>
+
+        
+
+
+
+
+<div class="widget widget-featured-posts">
+  <div class="widget-sidebar-head">
+    <h2 class="widget-sidebar-title">Featured posts</h2>
+  </div>
+  
+    
+    
+    <div class="post-featured-content">
+      
+      <a href="/the-tylerwoodward-project" class="post-featured-image">
+        
+        <img class="lazy" data-src="/images/the-tylerwoodward-project.jpg" alt="The Tyler Woodward Project: A Fresh Name For The Same Curious Tech Brain">
+      </a>
+      
+      <div class="post-featured-meta">
+        <h3 class="post-featured-title"><a href="/the-tylerwoodward-project">The Tyler Woodward Project: A Fresh Name For The Same Curious Tech Brain</a></h3>
+        <time class="post-featured-date" datetime="2025-11-25T23:00:00-06:00">25 Nov, 2025</time>
+      </div>
+    </div>
+    
+  
+
+    
+    
+    <div class="post-featured-content">
+      
+      <a href="/how-fcc-spectrum-auctions-push-broadcasters-toward-internet-first-delivery" class="post-featured-image">
+        
+        <div class="video-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            <polygon points="40,30 70,50 40,70"></polygon>
+          </svg>
+        </div>
+        
+        <img class="lazy" data-src="/images/cband.png" alt="How FCC Spectrum Auctions Push Broadcasters Toward Internet-First Delivery">
+      </a>
+      
+      <div class="post-featured-meta">
+        <h3 class="post-featured-title"><a href="/how-fcc-spectrum-auctions-push-broadcasters-toward-internet-first-delivery">How FCC Spectrum Auctions Push Broadcasters Toward Internet-First Delivery</a></h3>
+        <time class="post-featured-date" datetime="2025-11-23T08:00:00-06:00">23 Nov, 2025</time>
+      </div>
+    </div>
+    
+  
+
+    
+    
+    <div class="post-featured-content">
+      
+      <a href="/am-stereo-lost-legacy" class="post-featured-image">
+        
+        <div class="video-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            <polygon points="40,30 70,50 40,70"></polygon>
+          </svg>
+        </div>
+        
+        <img class="lazy" data-src="/images/am-stereo.png" alt="AM Stereo’s Lost Legacy! Could C-QUAM and the Harris AMS-G1 Have Saved Music on AM?">
+      </a>
+      
+      <div class="post-featured-meta">
+        <h3 class="post-featured-title"><a href="/am-stereo-lost-legacy">AM Stereo’s Lost Legacy! Could C-QUAM and the Harris AMS-G1 Have Saved Music on AM?</a></h3>
+        <time class="post-featured-date" datetime="2025-11-17T06:00:00-06:00">17 Nov, 2025</time>
+      </div>
+    </div>
+    
+  
+
+    
+    
+    <div class="post-featured-content">
+      
+      <a href="/why-siriusxm-sounds-mushy" class="post-featured-image">
+        
+        <div class="video-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            <polygon points="40,30 70,50 40,70"></polygon>
+          </svg>
+        </div>
+        
+        <img class="lazy" data-src="/images/siriusxm-audio-quality.jpg" alt="Why Satellite Radio Sounds Mushy">
+      </a>
+      
+      <div class="post-featured-meta">
+        <h3 class="post-featured-title"><a href="/why-siriusxm-sounds-mushy">Why Satellite Radio Sounds Mushy</a></h3>
+        <time class="post-featured-date" datetime="2025-11-10T05:00:00-06:00">10 Nov, 2025</time>
+      </div>
+    </div>
+    
+  
+
+</div>
+
+
+        
+<div class="widget widget-tags">
+  <div class="widget-sidebar-head">
+    <h2 class="widget-sidebar-title">Topics</h2>
+  </div>
+
+  <div class="tag-cloud">
+    
+      
+      
+      
+
+      
+
+      <a href="/tags/?tag=episodes"
+         class="tag-cloud__item"
+         style="background: #008800;">
+        Episodes
+      </a>
+    
+      
+      
+      
+
+      
+
+      <a href="/tags/?tag=tools"
+         class="tag-cloud__item"
+         style="background: #009999;">
+        Tools
+      </a>
+    
+      
+      
+      
+
+      
+
+      <a href="/tags/?tag=industry"
+         class="tag-cloud__item"
+         style="background: #000099;">
+        Industry
+      </a>
+    
+      
+      
+      
+
+      
+
+      <a href="/tags/?tag=engineering"
+         class="tag-cloud__item"
+         style="background: #444444;">
+        Engineering
+      </a>
+    
+      
+      
+      
+
+      
+
+      <a href="/tags/?tag=blog"
+         class="tag-cloud__item"
+         style="background: #C00000;">
+        Blog
+      </a>
+    
+  </div>
+</div>
+
+      </aside>
+    </div>
+  </div>
+</div>
+<!-- end post -->
+    </main>
+    <!-- end content -->
+
+    <!-- begin footer -->
+<footer class="footer">
+
+  <div class="footer__inner">
+    <div class="container">
+      <div class="row">
+
+        <div class="col col-4 col-d-12">
+          <a href="/"><img src="/logo.png" width="255px" border="0"></a>
+          <h3 class="footer__info__title"></h3>
+          
+          <p class="footer__info__description">A broadcast network engineer, exploring broadcasting, cybersecurity, data privacy, telecommunications, and tech on The Tyler Woodward Project.</p>
+          
+          
+          <div class="footer__social">
+            <ul class="footer__social__list list-reset">
+              
+              <li class="footer__social__item">
+                <a class="footer__social__link" href="https://podcasts.apple.com/podcast/id1803865840" target="_blank" rel="noopener"
+                  aria-label="Apple Podcasts link"><i class="fa-solid fa-podcast"></i></a>
+              </li>
+              
+              <li class="footer__social__item">
+                <a class="footer__social__link" href="https://open.spotify.com/show/3yITnZVToJsnKpU04ma4at" target="_blank" rel="noopener"
+                  aria-label="Spotify link"><i class="fa-brands fa-spotify"></i></a>
+              </li>
+              
+              <li class="footer__social__item">
+                <a class="footer__social__link" href="https://www.instagram.com/tylerwoodward.me" target="_blank" rel="noopener"
+                  aria-label="Instagram link"><i class="fa-brands fa-instagram"></i></a>
+              </li>
+              
+              <li class="footer__social__item">
+                <a class="footer__social__link" href="https://www.threads.com/@tylerwoodward.me" target="_blank" rel="noopener"
+                  aria-label="Threads link"><i class="fa-brands fa-threads"></i></a>
+              </li>
+              
+              <li class="footer__social__item">
+                <a class="footer__social__link" href="https://bsky.app/profile/tylerwoodward.me" target="_blank" rel="noopener"
+                  aria-label="Threads link"><i class="fa-brands fa-bluesky"></i></a>
+              </li>
+              
+              <li class="footer__social__item">
+                <a class="footer__social__link" href="feed.xml" target="_blank" rel="noopener"
+                  aria-label="RSS link"><i class="fa-solid fa-rss"></i></a>
+              </li>
+              
+            </ul>
+          </div>
+          
+        </div>
+
+        <div class="col col-4 col-d-12">
+          <h3 class="footer__title">Recent Posts</h3>
+          <div class="footer__recent-posts">
+            
+            <div class="footer__recent-content">
+              
+              <a href="/turkey-transmitters-and-thanks" class="footer__recent-image">
+                
+                <img class="lazy" data-src="/images/turkey-transmitters-thanks.png" alt="Turkey, Transmitters, And Thanks">
+              </a>
+              
+              <div class="footer__recent-meta">
+                <h3 class="footer__recent-title"><a href="/turkey-transmitters-and-thanks">Turkey, Transmitters, And Thanks</a></h3>
+                <time class="footer__recent-date" datetime="2025-11-26T07:00:00-06:00">26 Nov, 2025</time>
+              </div>
+            </div>
+            
+            <div class="footer__recent-content">
+              
+              <a href="/the-tylerwoodward-project" class="footer__recent-image">
+                
+                <img class="lazy" data-src="/images/the-tylerwoodward-project.jpg" alt="The Tyler Woodward Project: A Fresh Name For The Same Curious Tech Brain">
+              </a>
+              
+              <div class="footer__recent-meta">
+                <h3 class="footer__recent-title"><a href="/the-tylerwoodward-project">The Tyler Woodward Project: A Fresh Name For The Same Curious Tech Brain</a></h3>
+                <time class="footer__recent-date" datetime="2025-11-25T23:00:00-06:00">25 Nov, 2025</time>
+              </div>
+            </div>
+            
+            <div class="footer__recent-content">
+              
+              <a href="/how-fcc-spectrum-auctions-push-broadcasters-toward-internet-first-delivery" class="footer__recent-image">
+                
+                <div class="video-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                    <polygon points="40,30 70,50 40,70"></polygon>
+                  </svg>
+                </div>
+                
+                <img class="lazy" data-src="/images/cband.png" alt="How FCC Spectrum Auctions Push Broadcasters Toward Internet-First Delivery">
+              </a>
+              
+              <div class="footer__recent-meta">
+                <h3 class="footer__recent-title"><a href="/how-fcc-spectrum-auctions-push-broadcasters-toward-internet-first-delivery">How FCC Spectrum Auctions Push Broadcasters Toward Internet-First Delivery</a></h3>
+                <time class="footer__recent-date" datetime="2025-11-23T08:00:00-06:00">23 Nov, 2025</time>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+        
+        <div class="col col-2 col-d-6 col-m-12">
+          <div class="footer-nav__left">
+            <h3 class="footer__title">Menu</h3>
+            <div class="footer-nav__list">
+            
+            
+              <a class="footer-nav__link" href="/">Home</a>
+            
+            
+            
+              <a class="footer-nav__link" href="/tags/?tag=episodes">Episodes</a>
+            
+            
+            
+              <a class="footer-nav__link" href="/tags/?tag=blog">Blog</a>
+            
+            
+            
+              <a class="footer-nav__link" href="/archive/">Archive</a>
+            
+            
+            
+            
+            
+            </div>
+          </div>
+        </div>
+        
+
+        
+        
+
+        
+        <div class="col col-2 col-d-6 col-m-12">
+          <div class="footer-nav__right">
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <h3 class="footer__title">Pages</h3>
+            <div class="footer-nav__list">
+              
+                <a class="footer-nav__link" href="/about/">About</a>
+              
+                <a class="footer-nav__link" href="/contact/">Contact</a>
+              
+            </div>
+            
+            
+          </div>
+        </div>
+        
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <div class="copyright">&copy;2025 <a href="/">Fully Modulated</a>, Some Rights Reserved.<BR><B>Made with human creativity and machine magic.</B><BR>All views expressed are my own and do not reflect the views of my employer or any radio or TV stations.</div>
+      </div>
+    </div>
+  </div>
+
+</footer>
+<!-- end footer -->
+  </div>
+  <!-- end global wrap -->
+
+  <div class="top" title="Top"><i class="fa-solid fa-arrow-up"></i></div>
+
+  <div class="images-overlay"></div>
+
+  <script src="/js/scripts.js"></script>
+  <script src="/js/common.js"></script>
+</body>
+
+</html>

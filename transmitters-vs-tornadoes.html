@@ -6,27 +6,25 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>How Radio Engineers Can Use Uptime Kuma with Docker to Monitor Stations</title>
-  <meta name='description' content='Fully Modulated is a podcast and blog that covers radio, broadcasting technology, industry news, and audio engineering topics.'>
+  <title>Transmitters vs. Tornadoes: The Battle for Broadcast</title>
+  <meta name='description' content='When a tornado came within 250 yards of KMOX's tower, the engineer who just turned 40 that day drove through storm-damaged roads to get the station back on a...'>
 
-  <link rel="canonical" href="https://fullymodulated.com/uptime-kuma-for-radio-engineers">
+  <link rel="canonical" href="https://fullymodulated.com/transmitters-vs-tornadoes">
   <link rel="alternate" type="application/rss+xml" title="" href="/feed.xml">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="How Radio Engineers Can Use Uptime Kuma with Docker to Monitor Stations – Fully Modulated">
-  <meta name="twitter:description" content="Radio engineers live in a world where uptime is everything. A transmitter drops, a microwave link goes dark, or a firewall port gets blocked—and too often you only find out when the audience notices.
-">
-  <meta name="twitter:image:src" content="https://fullymodulated.com/images/uptime-kuma.jpg">
-  <meta name="twitter:image:src" content="https://fullymodulated.com/images/uptime-kuma.jpg">
+  <meta name="twitter:title" content="Transmitters vs. Tornadoes: The Battle for Broadcast – Fully Modulated">
+  <meta name="twitter:description" content="When a tornado came within 250 yards of KMOX&apos;s tower, the engineer who just turned 40 that day drove through storm-damaged roads to get the station back on air. This is radio resilience when communities need it most. ">
+  <meta name="twitter:image:src" content="https://fullymodulated.com/images/tornadoes.jpg">
+  <meta name="twitter:image:src" content="https://fullymodulated.com/images/tornadoes.jpg">
 
   <!-- Facebook OpenGraph -->
-  <meta property="og:url" content="https://fullymodulated.com/uptime-kuma-for-radio-engineers">
+  <meta property="og:url" content="https://fullymodulated.com/transmitters-vs-tornadoes">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="How Radio Engineers Can Use Uptime Kuma with Docker to Monitor Stations – Fully Modulated">
-  <meta property="og:description" content="Radio engineers live in a world where uptime is everything. A transmitter drops, a microwave link goes dark, or a firewall port gets blocked—and too often you only find out when the audience notices.
-">
-  <meta property="og:image" content="https://fullymodulated.com/images/uptime-kuma.jpg">
+  <meta property="og:title" content="Transmitters vs. Tornadoes: The Battle for Broadcast – Fully Modulated">
+  <meta property="og:description" content="When a tornado came within 250 yards of KMOX&apos;s tower, the engineer who just turned 40 that day drove through storm-damaged roads to get the station back on air. This is radio resilience when communities need it most. ">
+  <meta property="og:image" content="https://fullymodulated.com/images/tornadoes.jpg">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -190,24 +188,25 @@
       <div class="post-head">
 
         
-        
-        <div class="post-image">
-          <img class="lazy" data-src="/images/uptime-kuma.jpg" alt="How Radio Engineers Can Use Uptime Kuma with Docker to Monitor Stations">
+        <div class="post-video">
+          <div class="post-video__wrap">
+            <iframe src="https://www.youtube.com/embed/HzdHiXIwhJ8?si=apaA4QEe4NN0Z2Hl" loading="lazy" width="640" height="360" frameborder="0"
+              webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          </div>
         </div>
-        
         
 
         <div class="post-info">
           
           <div class="post-tags">
             
-            <a href="/tags/?tag=tools" class="post-tag"
-              style="background: #009999;">Tools</a>
+            <a href="/tags/?tag=episodes" class="post-tag"
+              style="background: #008800;">Episodes</a>
             
           </div>
           
 
-          <h1 class="post-title">How Radio Engineers Can Use Uptime Kuma with Docker to Monitor Stations</h1>
+          <h1 class="post-title">Transmitters vs. Tornadoes: The Battle for Broadcast</h1>
 
           <div class="post-meta">
             <a href="/about/" class="post-meta__image">
@@ -218,10 +217,10 @@
             <div class="post-meta__content">
               <a class="post-meta__author" href="/about/">Tyler Woodward</a>
               <div class="post-meta__bottom">
-                <time class="post-date" datetime="2025-10-01T09:00:00-05:00">01 Oct, 2025</time> –
+                <time class="post-date" datetime="2025-05-19T08:00:00-05:00">19 May, 2025</time> –
                 <span class="post-minutes">
                   
-                   6 min read  </span>
+                   3 min read  </span>
               </div>
             </div>
           </div>
@@ -232,211 +231,24 @@
       <article class="post">
         <div class="post__content">
           
-          <div class="post__toc">
-            <h2 class="post__toc__title">Table of Contents</h2>
-            <ol class="post__toc__list"><li><a href="#why-uptime-kuma-for-radio-engineers">Why Uptime Kuma for Radio Engineers?</a></li><li><a href="#step-by-step-installing-uptime-kuma-with-docker">Step-by-Step: Installing Uptime Kuma with Docker</a><ol><li><a href="#1-install-docker">1. Install Docker</a></li><li><a href="#2-run-kuma-in-docker">2. Run Kuma in Docker</a></li><li><a href="#3-access-the-web-ui">3. Access the Web UI</a></li></ol></li><li><a href="#adding-monitors-in-uptime-kuma">Adding Monitors in Uptime Kuma</a><ol><li><a href="#keyword-checks-for-web-interfaces">Keyword Checks for Web Interfaces</a></li><li><a href="#dns-monitoring">DNS Monitoring</a></li></ol></li><li><a href="#status-pages-and-incident-reports">Status Pages and Incident Reports</a><ol><li><a href="#incident-reports-on-status-pages">Incident Reports on Status Pages</a></li></ol></li><li><a href="#notifications-beyond-email">Notifications: Beyond Email</a></li><li><a href="#security-best-practices">Security Best Practices</a></li><li><a href="#wrapping-up">Wrapping Up</a></li></ol>
-          </div>
-          
 
-          <p>Radio engineers live in a world where <strong>uptime is everything</strong>. A transmitter drops, a microwave link goes dark, or a firewall port gets blocked—and too often you only find out when the audience notices.</p>
+          <h1 id="when-disaster-strikes-the-unsung-heroes-of-broadcast-engineering">When Disaster Strikes: The Unsung Heroes of Broadcast Engineering</h1>
 
-<p>A while back, I wrote about <a href="https://www.fullymodulated.com/posts/uptime-kuma-for-radio-stations/">Uptime Kuma for radio stations</a> and why it’s such a valuable tool for broadcast engineers. That post sparked a lot of interest, and many of you reached out asking for a <strong>step-by-step guide</strong> to actually get it running in your plant. That’s what this post is all about: a practical walkthrough for installing Uptime Kuma with Docker and setting it up to monitor the infrastructure that keeps your station alive.</p>
+<p>The night of May 26, 2025, began like many others for broadcast engineers Kyle Hammer and Aaron Cox at KMOX in St. Louis. They were keeping an eye on weather alerts as storms approached their region, a routine part of their job. But within hours, this ordinary vigilance would transform into an extraordinary emergency response that showcases why broadcast engineers are the backbone of radio resilience during natural disasters.</p>
 
-<p><a href="https://github.com/louislam/uptime-kuma">Uptime Kuma</a> is an open-source uptime monitoring system. It runs in Docker and gives you a modern, responsive dashboard for keeping tabs on anything with an IP address. Originally built for IT systems, it’s a natural fit for broadcast engineering: <strong>transmitters, STL links, site circuits, workstations, firewall ports, and even DNS records</strong>.</p>
+<p>At 11:37 PM, an EF3 tornado tore through St. Louis, passing just 250 yards from the KMOX FM transmitter tower, less than the length of a city block. The station’s signal disappeared as power failed and the backup generator struggled to restore full functionality. For listeners, the experience was jarring: mid-sentence or mid-song, their trusted local station vanished into static. This sudden silence represents the nightmare scenario for broadcast professionals, but it is precisely the kind of crisis they prepare to handle throughout their careers.</p>
 
-<p>At <em><a href="https://fullymodulated.com">Fully Modulated</a></em>, we’re big fans of tools that keep stations on the air without breaking budgets. Kuma is one of the most effective options out there.</p>
+<p>What happened next exemplifies the critical human element in broadcasting infrastructure. Hammer, who had just celebrated his 40th birthday that day, made the decision to physically respond to the site despite hazardous conditions. He navigated roads strewn with debris, downed power lines, and fallen trees in the middle of the night to reach the transmitter. This immediate, boots-on-the-ground response is rarely seen by the public but represents the true foundation of broadcast resilience. No automation system or remote diagnostics could replace the hands-on expertise and determination that brought KMOX back to life that night.</p>
 
-<hr />
+<p>Upon arriving at the site, Hammer found significant storm damage but, miraculously, the core transmission infrastructure remained intact. Through a combination of technical knowledge, experience-based intuition, and physical effort, he implemented field improvisations, rerouting power distribution and realigning equipment to restore the signal chain. Within approximately one hour of going dark, KMOX FM was broadcasting again, serving a community that likely needed emergency information more than ever.</p>
 
-<h2 id="why-uptime-kuma-for-radio-engineers">Why Uptime Kuma for Radio Engineers?</h2>
+<p>This incident highlights several crucial realities about modern broadcasting that often go unacknowledged. First, while technology continues to advance, human judgment and response remain irreplaceable during emergencies. Second, as extreme weather events become more common, investment in broadcast infrastructure resilience becomes increasingly essential for public safety. Third, local radio continues to serve as a vital information lifeline when other communication systems fail during disasters.</p>
 
-<p>Traditional broadcast monitoring often depends on expensive telemetry gear and SNMP traps. Kuma takes a simpler, more flexible approach:</p>
+<p>The dedication of broadcast engineers like Hammer and Cox rarely makes headlines, but their work directly impacts public safety and community resilience. They represent a profession that operates largely behind the scenes until crisis strikes, at which point they become essential first responders in maintaining communication channels. As Kyle Hammer later noted when interviewed by Radio World, the KMOX engineering team viewed this successful response not as a final victory but as a learning opportunity to improve future emergency protocols, the hallmark of professional engineering excellence.</p>
 
-<ul>
-  <li><strong>Ping (ICMP):</strong> confirms devices are reachable.</li>
-  <li><strong>HTTP/HTTPS:</strong> ensures web interfaces or stream URLs are live.</li>
-  <li><strong>TCP Ports:</strong> checks services like codecs, VPN tunnels, or firewall rules.</li>
-  <li><strong>DNS Records:</strong> verifies your website, streaming domains, and mail servers resolve correctly.</li>
-</ul>
+<p>In an era where we increasingly rely on digital networks and automated systems, the KMOX tornado response serves as a powerful reminder that physical infrastructure and human expertise remain foundational to emergency communications. When cell towers fail and internet connections drop, radio’s comparative simplicity becomes its greatest strength, but only when supported by knowledgeable professionals willing to drive through a storm at midnight to keep the signal flowing.</p>
 
-<p>And here’s the bigger picture: more and more of our <strong>broadcast infrastructure, audio plants, and transmitter sites</strong> are becoming <strong>IP-driven</strong>. The STL might ride on microwave IP, transmitters are managed through web consoles, and even your automation system is tied into IP networks.</p>
-
-<p>That’s where Kuma shines. Fire up a small <a href="https://ubuntu.com/">Ubuntu</a> VM, or a Raspberry Pi running <a href="https://www.docker.com/">Docker</a>, and within minutes you’ve got a monitoring system designed for today’s broadcast reality.</p>
-
-<hr />
-
-<h2 id="step-by-step-installing-uptime-kuma-with-docker">Step-by-Step: Installing Uptime Kuma with Docker</h2>
-
-<h3 id="1-install-docker">1. Install Docker</h3>
-
-<p>On Ubuntu/Debian:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt update
-<span class="nb">sudo </span>apt <span class="nb">install</span> <span class="nt">-y</span> docker.io
-</code></pre></div></div>
-
-<p>Verify installation:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker <span class="nt">--version</span>
-</code></pre></div></div>
-
-<h3 id="2-run-kuma-in-docker">2. Run Kuma in Docker</h3>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>docker run <span class="nt">-d</span> <span class="nt">--restart</span><span class="o">=</span>always <span class="nt">-p</span> 3001:3001   <span class="nt">-v</span> uptime-kuma:/app/data <span class="nt">--name</span> uptime-kuma   louislam/uptime-kuma:1
-</code></pre></div></div>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">-p 3001:3001</code> maps port 3001 to the host.</li>
-  <li><code class="language-plaintext highlighter-rouge">-v uptime-kuma:/app/data</code> keeps your data persistent.</li>
-  <li><code class="language-plaintext highlighter-rouge">--restart=always</code> ensures it restarts on boot.</li>
-</ul>
-
-<p>Check status:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker ps
-</code></pre></div></div>
-
-<h3 id="3-access-the-web-ui">3. Access the Web UI</h3>
-
-<p>In your browser:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://&lt;server-ip&gt;:3001
-</code></pre></div></div>
-
-<p>On first launch you’ll create an <strong>admin account</strong>.</p>
-
-<hr />
-
-<h2 id="adding-monitors-in-uptime-kuma">Adding Monitors in Uptime Kuma</h2>
-
-<p>Click <strong>Add New Monitor</strong> and choose a type.</p>
-
-<ul>
-  <li>
-    <p><strong>ICMP (Ping)</strong>
-Ideal for transmitters, STL radios, routers, or workstations.</p>
-  </li>
-  <li>
-    <p><strong>HTTP/HTTPS</strong><br />
-Perfect for stream URLs, transmitter web interfaces, or automation dashboards.</p>
-  </li>
-  <li>
-    <p><strong>TCP Port</strong><br />
-Confirm that firewall rules or codec ports are open and listening.</p>
-  </li>
-</ul>
-
-<h3 id="keyword-checks-for-web-interfaces">Keyword Checks for Web Interfaces</h3>
-
-<p>Some broadcast devices don’t even respond to pings. For example, the <strong>Omnia.9 audio processor</strong> blocks ICMP entirely. But Kuma lets you go one step further with <strong>keyword checks</strong> on HTTP/HTTPS monitors.</p>
-
-<p>When adding a monitor:</p>
-
-<ul>
-  <li>Set <strong>Monitor Type</strong> to <code class="language-plaintext highlighter-rouge">HTTP(s)</code>.</li>
-  <li>Enter the device’s web UI address, for example:</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://IP-ADDRESS:7380
-</code></pre></div></div>
-
-<ul>
-  <li>Add the <strong>Keyword</strong> field and set it to:</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Omnia.9
-</code></pre></div></div>
-
-<p>Now Kuma will load the page and confirm that the keyword is present. If it finds it, the device reports as OK. If the keyword is missing—or the page doesn’t load—you’ll get an alert.</p>
-
-<h3 id="dns-monitoring">DNS Monitoring</h3>
-
-<p>Kuma can also check <strong>DNS records</strong>. This is huge for broadcasters, since a misconfigured record can knock listeners offline or break email overnight.</p>
-
-<p>You can monitor:</p>
-
-<ul>
-  <li><strong>A/AAAA records</strong> for your station’s website or streaming domains.</li>
-  <li><strong>CNAMEs</strong> for subdomains like <code class="language-plaintext highlighter-rouge">stream.mystation.com</code>.</li>
-  <li><strong>MX records</strong> for email delivery reliability.</li>
-  <li><strong>TXT records</strong> for SPF/DKIM entries.</li>
-</ul>
-
-<p>If any of these records change unexpectedly—or stop resolving—Kuma alerts you immediately. That means you’ll know about DNS problems before they impact streaming revenue, website traffic, or critical business email.</p>
-
-<hr />
-
-<h2 id="status-pages-and-incident-reports">Status Pages and Incident Reports</h2>
-
-<p>Kuma can generate <strong>status pages</strong> that are more than just a dashboard for engineers:</p>
-
-<ul>
-  <li>Group all monitors for a site (e.g., “TX Site A”) into one public-facing page.</li>
-  <li>Share these pages with <strong>station staff</strong> so they can check system status before ringing your phone.</li>
-</ul>
-
-<h3 id="incident-reports-on-status-pages">Incident Reports on Status Pages</h3>
-
-<p>One powerful feature: you can post your <strong>own incident reports</strong> directly on a status page.</p>
-
-<p>If you already know the transmitter STL is down and you’re driving to the site, you can log an incident in Kuma. Staff checking the page will see your note and know you’re on it.</p>
-
-<p>This simple workflow reduces unnecessary calls and gives management visibility while you stay in control of the narrative.</p>
-
-<hr />
-
-<h2 id="notifications-beyond-email">Notifications: Beyond Email</h2>
-
-<p>Uptime Kuma supports far more than email alerts. Its <a href="https://github.com/louislam/uptime-kuma/tree/master/src/components/notifications">notification system</a> includes dozens of integrations:</p>
-
-<ul>
-  <li><strong>Chat &amp; Collaboration:</strong> Slack, Microsoft Teams, Discord, Mattermost, Telegram, Google Chat, Rocket.Chat, Zulip</li>
-  <li><strong>Incident &amp; Ticketing:</strong> PagerDuty, OpsGenie, ServiceNow</li>
-  <li><strong>Push Notifications:</strong> Pushover, Gotify, Pushbullet, Bark, ntfy</li>
-  <li><strong>Messaging APIs:</strong> Twilio (SMS), Signal, WhatsApp via gateways</li>
-  <li><strong>Webhooks:</strong> Custom integrations into scripts, automation, or internal systems</li>
-  <li><strong>Others:</strong> Email (SMTP), Matrix, LINE, WeCom, and more</li>
-</ul>
-
-<p>For a radio engineer, this means:</p>
-
-<ul>
-  <li>A <strong>Slack alert</strong> goes to #engineering the second your STL link fails.</li>
-  <li>A <strong>Teams webhook</strong> updates management when the transmitter drops.</li>
-  <li>A <strong>PagerDuty alert</strong> wakes the on-call engineer at 2am.</li>
-  <li>A <strong>custom webhook</strong> could even trigger a mute/unmute script in your automation system.</li>
-</ul>
-
-<p>You can assign different notification methods per monitor. For example, a workstation ping might just email you, but a transmitter outage could blast Slack, Teams, and PagerDuty all at once.</p>
-
-<hr />
-
-<h2 id="security-best-practices">Security Best Practices</h2>
-
-<p>If your Kuma dashboard will be exposed beyond your LAN:</p>
-
-<ul>
-  <li>Run it behind a <strong>reverse proxy</strong> (like <a href="https://nginx.org/">Nginx</a> or <a href="https://traefik.io/">Traefik</a>) with <a href="https://letsencrypt.org/">Let’s Encrypt</a>.</li>
-  <li>Enable <strong>two-factor authentication</strong> in settings.</li>
-  <li>Restrict access with firewall rules or a VPN.</li>
-  <li>Keep Docker and Kuma updated regularly.</li>
-</ul>
-
-<hr />
-
-<h2 id="wrapping-up">Wrapping Up</h2>
-
-<p>For almost zero cost, radio engineers can gain <strong>modern uptime monitoring</strong>. Uptime Kuma is lightweight, reliable, and designed to notify you before listeners hear silence.</p>
-
-<p>With keyword monitoring for devices like the Omnia.9, DNS checks to keep tabs on your domains, status pages with incident reports to keep staff informed, and powerful integrations for Slack, Teams, PagerDuty, and more, Kuma isn’t just a monitor—it’s a <strong>communication hub for your entire broadcast operation</strong>.</p>
-
-<p>Fire up a VM or a Raspberry Pi, drop in Docker, and in under an hour you’ll have one of the most useful broadcast tools you’ve ever deployed.</p>
-
-<p>Want more broadcast-engineering tools like this? Check out my earlier article on <a href="https://www.fullymodulated.com/posts/uptime-kuma-for-radio-stations/">Uptime Kuma for radio stations</a>, or dive deeper into related topics on the <a href="https://www.fullymodulated.com/apple-podcast/">Fully Modulated podcast episodes</a>.</p>
-
-<hr />
-
-<p><em>Have you tried Uptime Kuma at your site? Share your setup in the comments!</em></p>
+<iframe height="175" width="100%" title="Media player" src="https://embed.podcasts.apple.com/us/podcast/transmitters-vs-tornadoes-the-battle-for-broadcast/id1803865840?i=1000714827993&amp;itscg=30200&amp;itsct=podcast_box_player&amp;ls=1&amp;mttnsubad=1000714827993&amp;theme=auto" id="embedPlayer" style="border:0;border-radius:12px;width:100%;height:175px;max-width:660px" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *; clipboard-write"></iframe>
 
         </div>
       </article>
@@ -445,23 +257,23 @@ Confirm that firewall rules or codec ports are open and listening.</p>
   <div class="share__title">Share this:</div>
   <ul class="share__list list-reset">
     <li class="share__item">
-      <a class="share__link share__facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://fullymodulated.com/uptime-kuma-for-radio-engineers"
+      <a class="share__link share__facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://fullymodulated.com/transmitters-vs-tornadoes"
         onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
         title="Share on Facebook" rel="nofollow"><i class="fa-brands fa-facebook-f"></i></a>
     </li>
     <li class="share__item">
       <a class="share__link share__twitter"
-        href="https://twitter.com/intent/tweet?text=How%20Radio%20Engineers%20Can%20Use%20Uptime%20Kuma%20with%20Docker%20to%20Monitor%20Stations&url=https://fullymodulated.com/uptime-kuma-for-radio-engineers"
+        href="https://twitter.com/intent/tweet?text=Transmitters%20vs.%20Tornadoes:%20The%20Battle%20for%20Broadcast&url=https://fullymodulated.com/transmitters-vs-tornadoes"
         onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
         title="Share on Twitter" rel="nofollow"><i class="fa-brands fa-x-twitter"></i></a>
     </li>
     <li class="share__item">
-      <a class="share__link share__pinterest" href="http://pinterest.com/pin/create/button/?url=https://fullymodulated.com/uptime-kuma-for-radio-engineers&amp;media=https://fullymodulated.comimages/uptime-kuma.jpg&amp;description=How%20Radio%20Engineers%20Can%20Use%20Uptime%20Kuma%20with%20Docker%20to%20Monitor%20Stations"
+      <a class="share__link share__pinterest" href="http://pinterest.com/pin/create/button/?url=https://fullymodulated.com/transmitters-vs-tornadoes&amp;media=https://fullymodulated.com/images/tornadoes.jpg&amp;description=Transmitters%20vs.%20Tornadoes:%20The%20Battle%20for%20Broadcast"
       onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;" title="Share on Pinterest"
       rel="nofollow"><i class="fa-brands fa-pinterest"></i></a>
     </li>
     <li class="share__item">
-      <a class="share__link share__linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https://fullymodulated.com/uptime-kuma-for-radio-engineers&title=How%20Radio%20Engineers%20Can%20Use%20Uptime%20Kuma%20with%20Docker%20to%20Monitor%20Stations&summary=&source="
+      <a class="share__link share__linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https://fullymodulated.com/transmitters-vs-tornadoes&title=Transmitters%20vs.%20Tornadoes:%20The%20Battle%20for%20Broadcast&summary=When%20a%20tornado%20came%20within%20250%20yards%20of%20KMOX's%20tower,%20the%20engineer%20who%20just%20turned%2040%20that%20day%20drove%20through%20storm-damaged%20roads%20to%20get%20the%20station%20back%20on%20air.%20This%20is%20radio%20resilience%20when%20communities%20need%20it%20most.%20&source="
       onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn" rel="nofollow"><i class="fa-brands fa-linkedin-in"></i></a>
     </li>
   </ul>
@@ -470,7 +282,7 @@ Confirm that firewall rules or codec ports are open and listening.</p>
   
   <div class="post__prev">
     
-    <a href="/radio-stunting" class="prev__image">
+    <a href="/free-software-priceless-results-essential-open-source-tools-for-broadcast-engineers" class="prev__image">
       
       <div class="video-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
@@ -478,12 +290,12 @@ Confirm that firewall rules or codec ports are open and listening.</p>
         </svg>
       </div>
       
-      <img class="lazy" data-src="/images/radio-stunting.png" alt="How Radio Engineers Can Use Uptime Kuma with Docker to Monitor Stations">
+      <img class="lazy" data-src="/images/01-2.jpg" alt="Transmitters vs. Tornadoes: The Battle for Broadcast">
     </a>
     
     <div class="prev__box">
       <span class="post__nav__prev">Older post</span>
-      <h2 class="post__nav__title"><a href="/radio-stunting">Radio Stunting! When Stations Throw Out the Rulebook</a></h2>
+      <h2 class="post__nav__title"><a href="/free-software-priceless-results-essential-open-source-tools-for-broadcast-engineers">Free Software, Priceless Results: Essential Open Source Tools for Broadcast Engineers</a></h2>
     </div>
   </div>
   
@@ -492,10 +304,10 @@ Confirm that firewall rules or codec ports are open and listening.</p>
   <div class="post__next">
     <div class="next__box">
       <span class="post__nav__next">Newer post</span>
-      <h2 class="post__nav__title"><a href="/metallica-napster-radio-leak">Napster Bad! How a Metallica Leak Rewired Radio</a></h2>
+      <h2 class="post__nav__title"><a href="/is-radios-birthday-a-lie-the-bizarre-origins-of-national-radio-day">Is Radio's Birthday a Lie? The Bizarre Origins of National Radio Day</a></h2>
     </div>
     
-    <a href="/metallica-napster-radio-leak" class="next__image">
+    <a href="/is-radios-birthday-a-lie-the-bizarre-origins-of-national-radio-day" class="next__image">
       
       <div class="video-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
@@ -503,7 +315,7 @@ Confirm that firewall rules or codec ports are open and listening.</p>
         </svg>
       </div>
       
-      <img class="lazy" data-src="/images/Napster_Blog.png" alt="How Radio Engineers Can Use Uptime Kuma with Docker to Monitor Stations">
+      <img class="lazy" data-src="/images/eric-nopanen-8e0EHPUx3Mo-unsplash.jpg" alt="Transmitters vs. Tornadoes: The Battle for Broadcast">
     </a>
     
   </div>
@@ -568,104 +380,6 @@ Confirm that firewall rules or codec ports are open and listening.</p>
     
 
     
-    
-    
-    
-
-    
-
-    
-    
-    
-    
-
-    
-
-    
-    
-    
-    
-
-    
-
-    
-    
-    
-    
-
-    
-
-    
-    
-    
-    
-
-    
-
-    
-    
-    
-    
-
-    
-
-    
-    
-    
-    
-
-    
-
-    
-    
-    
-    
-
-    
-
-    
-    
-    
-    
-
-    
-
-    
-    
-    
-    
-
-    
-
-    
-    
-    
-    
-
-    
-
-    
-    
-    
-    
-
-    
-
-    
-    
-    
-    
-
-    
-
-    
-    
-    
-    
-
-    
-
-    
 
       <div class="article article--flexible">
   <div class="article__inner">
@@ -674,8 +388,8 @@ Confirm that firewall rules or codec ports are open and listening.</p>
     <div class="article__head">
       
 
-      <a class="article__image" href="/audacity-4-looks-like-a-daw">
-        <img class="lazy" data-src="/images/audacity4.png" alt="Audacity 4 Looks Like a DAW! Even If the Developers Say It Isn’t">
+      <a class="article__image" href="/turkey-transmitters-and-thanks">
+        <img class="lazy" data-src="/images/turkey-transmitters-thanks.png" alt="Turkey, Transmitters, And Thanks">
       </a>
     </div>
     
@@ -685,28 +399,26 @@ Confirm that firewall rules or codec ports are open and listening.</p>
       
       <div class="article__tags">
         
-        <a href="/tags/?tag=tools"
-          class="article__tag" style="background: #009999;">
-          Tools
+        <a href="/tags/?tag=episodes"
+          class="article__tag" style="background: #008800;">
+          Episodes
         </a>
         
       </div>
       
 
       <h2 class="article__title">
-        <a href="/audacity-4-looks-like-a-daw">Audacity 4 Looks Like a DAW! Even If the Developers Say It Isn’t</a>
+        <a href="/turkey-transmitters-and-thanks">Turkey, Transmitters, And Thanks</a>
       </h2>
 
-      <p class="article__excerpt">> *“Audacity 4 will feature a complete remake of the UI and is still quite some ways out.”*
-
-Two and a half decades after its first release, **[Audacity](htt...</p>
+      <p class="article__excerpt">A reflection on gratitude in broadcasting, tracing a career journey from early audio work to network engineering, and celebrating the mentors, colleagues, and listeners who keep radio resilient.</p>
 
       <div class="article__meta">
-        <time class="article__date" datetime="2025-10-08T08:00:00-05:00">08 Oct, 2025</time>
+        <time class="article__date" datetime="2025-11-26T07:00:00-06:00">26 Nov, 2025</time>
         <div class="article__minutes">
           
           
-            7 min read
+            4 min read
           
         </div>
       </div>
@@ -732,34 +444,6 @@ Two and a half decades after its first release, **[Audacity](htt...</p>
     
 
     
-    
-    
-    
-
-    
-
-    
-    
-    
-    
-
-    
-
-    
-    
-    
-    
-
-    
-
-    
-    
-    
-    
-
-    
-
-    
 
       <div class="article article--flexible">
   <div class="article__inner">
@@ -767,9 +451,15 @@ Two and a half decades after its first release, **[Audacity](htt...</p>
     
     <div class="article__head">
       
+      <div class="video-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+          <polygon points="40,30 70,50 40,70"></polygon>
+        </svg>
+      </div>
+      
 
-      <a class="article__image" href="/uptime-kuma-for-radio-stations">
-        <img class="lazy" data-src="/images/uptime-kuma.jpg" alt="Uptime Kuma! The Open-Source Monitoring Tool Radio Engineers Didn’t Know They Needed">
+      <a class="article__image" href="/how-fcc-spectrum-auctions-push-broadcasters-toward-internet-first-delivery">
+        <img class="lazy" data-src="/images/cband.png" alt="How FCC Spectrum Auctions Push Broadcasters Toward Internet-First Delivery">
       </a>
     </div>
     
@@ -779,22 +469,22 @@ Two and a half decades after its first release, **[Audacity](htt...</p>
       
       <div class="article__tags">
         
-        <a href="/tags/?tag=tools"
-          class="article__tag" style="background: #009999;">
-          Tools
+        <a href="/tags/?tag=episodes"
+          class="article__tag" style="background: #008800;">
+          Episodes
         </a>
         
       </div>
       
 
       <h2 class="article__title">
-        <a href="/uptime-kuma-for-radio-stations">Uptime Kuma! The Open-Source Monitoring Tool Radio Engineers Didn’t Know They Needed</a>
+        <a href="/how-fcc-spectrum-auctions-push-broadcasters-toward-internet-first-delivery">How FCC Spectrum Auctions Push Broadcasters Toward Internet-First Delivery</a>
       </h2>
 
-      <p class="article__excerpt">Radio stations spend serious money to make sure they never go dark. Dead air isn’t just awkward, it’s expensive. For decades the solution has been purpose-bu...</p>
+      <p class="article__excerpt">C-band once powered broadcast feeds with outstanding reliability. As spectrum shifts, stations need a blend of satellite, fiber, and cloud connections, automated failover, and active monitoring for uninterrupted delivery and resilient service.</p>
 
       <div class="article__meta">
-        <time class="article__date" datetime="2025-09-22T08:00:00-05:00">22 Sep, 2025</time>
+        <time class="article__date" datetime="2025-11-23T08:00:00-06:00">23 Nov, 2025</time>
         <div class="article__minutes">
           
           
@@ -817,77 +507,62 @@ Two and a half decades after its first release, **[Audacity](htt...</p>
     
 
     
-    
-    
-    
+
+      <div class="article article--flexible">
+  <div class="article__inner">
 
     
+    <div class="article__head">
+      
+      <div class="video-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+          <polygon points="40,30 70,50 40,70"></polygon>
+        </svg>
+      </div>
+      
 
-    
-    
-    
-    
-
-    
-
-    
-    
-    
-    
-
-    
-
-    
-    
-    
+      <a class="article__image" href="/am-stereo-lost-legacy">
+        <img class="lazy" data-src="/images/am-stereo.png" alt="AM Stereo’s Lost Legacy! Could C-QUAM and the Harris AMS-G1 Have Saved Music on AM?">
+      </a>
+    </div>
     
 
-    
+    <div class="article__content">
+
+      
+      <div class="article__tags">
+        
+        <a href="/tags/?tag=episodes"
+          class="article__tag" style="background: #008800;">
+          Episodes
+        </a>
+        
+      </div>
+      
+
+      <h2 class="article__title">
+        <a href="/am-stereo-lost-legacy">AM Stereo’s Lost Legacy! Could C-QUAM and the Harris AMS-G1 Have Saved Music on AM?</a>
+      </h2>
+
+      <p class="article__excerpt">Most people hear [AM radio](https://en.wikipedia.org/wiki/AM_broadcasting) and think of a thin voice cutting through static, not music that lands with weight...</p>
+
+      <div class="article__meta">
+        <time class="article__date" datetime="2025-11-17T06:00:00-06:00">17 Nov, 2025</time>
+        <div class="article__minutes">
+          
+          
+            3 min read
+          
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
 
     
-    
-    
-    
-
-    
-
-    
-    
-    
-    
-
-    
-
-    
-    
-    
-    
-
-    
-
-    
-    
-    
-    
-
-    
-
-    
-    
-    
-    
-
-    
-
-    
-    
-    
-    
-
-    
-
-    
-    
+        
+          
   </div>
 </div>
     </div>

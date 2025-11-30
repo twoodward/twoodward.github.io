@@ -5,9 +5,83 @@
         <description>Fully Modulated is a podcast and blog that covers radio, broadcasting technology, industry news, and audio engineering topics.</description>
         <link>https://fullymodulated.com/</link>
         <atom:link href="https://fullymodulated.com/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Thu, 27 Nov 2025 00:57:18 -0600</pubDate>
-        <lastBuildDate>Thu, 27 Nov 2025 00:57:18 -0600</lastBuildDate>
+        <pubDate>Sun, 30 Nov 2025 17:24:36 -0600</pubDate>
+        <lastBuildDate>Sun, 30 Nov 2025 17:24:36 -0600</lastBuildDate>
         <generator>Jekyll v4.4.1</generator>
+        
+            <item>
+                <title>How Broadcast Towers Survive Winter Ice: Engineering Against the Elements</title>
+                <description>&lt;h1 id=&quot;surviving-winter-weather-how-radio-stations-keep-their-signals-strong&quot;&gt;Surviving Winter Weather: How Radio Stations Keep Their Signals Strong&lt;/h1&gt;
+
+&lt;p&gt;As winter storms hit with full force, radio stations face unique challenges that can disrupt their broadcasts. In this post, you’ll explore how engineers tackle the complications brought on by ice, wind, and snow to keep your favorite stations on air, even in the harshest conditions.&lt;/p&gt;
+
+&lt;h2 id=&quot;understanding-winters-impact-on-signals&quot;&gt;Understanding Winter’s Impact on Signals&lt;/h2&gt;
+
+&lt;p&gt;When heavy, wet snow blankets the landscape, it does more than create a picturesque scene; it can seriously affect radio and television antennas. The sticky nature of this snow allows it to cling to antenna structures, increasing their physical size and changing their electrical characteristics in ways that distort signals and degrade transmission quality.&lt;br /&gt;
+Ice accumulation adds extra weight to towers, feedlines, and antennas, which can stress structural components, detune carefully engineered systems, and in extreme cases threaten the integrity of the tower itself. Engineers often have to make quick decisions about whether to ride out the storm, reduce power, or risk a temporary loss of the broadcast to protect equipment and ensure staff safety.&lt;/p&gt;
+
+&lt;p&gt;Strong winter winds can make these problems worse by causing antennas and transmission lines to sway, flex, or vibrate. This movement may lead to intermittent connections, arcing on transmission line components, or shifting ice loads that alter how the antenna radiates energy.&lt;br /&gt;
+Temperature swings also play a role, causing metal and fiberglass components to expand and contract, which can affect connections, gaskets, and weatherproofing over time.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-ice-detunes-antennas&quot;&gt;How Ice Detunes Antennas&lt;/h2&gt;
+
+&lt;p&gt;Broadcast antennas are carefully designed for specific frequencies, patterns, and power levels, and even small physical changes can alter their behavior. When snow or ice builds up on an antenna, it essentially changes the antenna’s shape and the environment around it, shifting its resonant frequency and making it less efficient at radiating power.&lt;br /&gt;
+The result can be increased reflected power on the transmission line, higher standing wave ratio (SWR), and more stress on the transmitter as it attempts to push energy into a mismatched load.&lt;/p&gt;
+
+&lt;p&gt;In many facilities, transmitters constantly monitor SWR and will automatically reduce power or shut down entirely if levels exceed safe thresholds. This protection prevents damage but also means listeners may experience weaker signals or brief outages during the worst parts of a storm.&lt;br /&gt;
+Engineers must then decide whether to adjust the system, leave it in a reduced-power mode, or shut down until conditions improve.&lt;/p&gt;
+
+&lt;h2 id=&quot;innovative-fixes-for-icy-antennas&quot;&gt;Innovative Fixes for Icy Antennas&lt;/h2&gt;
+
+&lt;p&gt;Many stations use specialized heaters to melt ice buildup on antennas, feedlines, or critical exposed components. These systems may be built into the antenna itself or wrapped around waveguides and coax to keep ice from forming in the first place, helping maintain a clear surface so signals stay strong and consistent.&lt;br /&gt;
+Heater systems must be carefully designed so they do not introduce noise, disturb the antenna’s pattern, or overload power systems already under strain from winter energy usage at remote transmitter sites.&lt;/p&gt;
+
+&lt;p&gt;Some facilities also rely on large fiberglass covers or “radomes” that fully enclose antennas and protect them from the elements. A properly designed radome prevents ice and snow from sticking directly to the antenna, reduces wind loading, and can even help keep the internal environment more stable in terms of temperature and moisture.&lt;br /&gt;
+Engineers must account for the radome’s material properties when designing the antenna system, since even a thin cover can slightly affect signal propagation and pattern if not properly modeled and tested.&lt;/p&gt;
+
+&lt;p&gt;In certain cases, stations will use mechanical solutions such as strategically placed vibration devices or flexible mounts that encourage ice to crack and fall away when wind speeds pick up. These are less common than heaters or radomes, but in specific climates and tower configurations they can provide an extra layer of resilience.&lt;br /&gt;
+The choice of method depends on frequency, antenna type, tower design, available power at the site, and how frequently severe icing conditions occur.&lt;/p&gt;
+
+&lt;h2 id=&quot;power-backup-and-access-challenges&quot;&gt;Power, Backup, and Access Challenges&lt;/h2&gt;
+
+&lt;p&gt;Keeping a station on the air in winter is not just about the antenna; it is also about power and physical access. Many transmitter sites are located on remote hills or towers far from major roads, and heavy snow or ice can make them difficult or impossible to reach for hours or even days.&lt;br /&gt;
+To handle this, engineers design systems with redundant transmitters, automatic changeover switches, and remote monitoring so that many faults can be corrected or worked around without anyone physically visiting the site.&lt;/p&gt;
+
+&lt;p&gt;Backup generators and battery systems are critical at these remote locations, especially when storms bring down power lines or cause prolonged outages. Engineers routinely test generators, fuel systems, and automatic transfer switches before winter to make sure they will start reliably when needed.&lt;br /&gt;
+If commercial power fails, these backup systems take over, keeping transmitters, heaters, and site control equipment energized while utility crews work to restore the grid.&lt;/p&gt;
+
+&lt;h2 id=&quot;engineers-behind-the-scenes&quot;&gt;Engineers Behind the Scenes&lt;/h2&gt;
+
+&lt;p&gt;During winter storms, the work of engineers becomes especially critical as they monitor conditions and respond in real time. They keep a close eye on telemetry such as transmitter power, SWR, modulation levels, generator status, and site temperature, often from home or a network operations center.&lt;br /&gt;
+If readings show rising reflected power or sudden changes in antenna performance, engineers may remotely reduce power, disable certain components, or switch to backup antennas and transmitters to avoid damage.&lt;/p&gt;
+
+&lt;p&gt;They may use a variety of “weird little tricks” developed from years of experience with a particular site, from slightly adjusting transmitter power to tweak how the antenna behaves under icing, to deliberately shifting to a backup antenna that is less efficient but more tolerant of snow buildup.&lt;br /&gt;
+In some cases, they will temporarily accept a weaker or slightly distorted coverage pattern in order to maintain at least some usable signal for listeners until conditions improve and a full-power configuration can safely return.&lt;/p&gt;
+
+&lt;p&gt;When road conditions allow, engineers may climb towers or access rooftops to visually inspect antennas and transmission lines, clear ice from critical components, or make emergency repairs. These tasks require strict safety procedures, specialized gear, and careful judgment about when it is safe to work aloft in harsh weather.&lt;br /&gt;
+The combination of technical knowledge, physical skill, and risk management makes winter broadcast maintenance a demanding part of the job.&lt;/p&gt;
+
+&lt;h2 id=&quot;keeping-listeners-informed-and-connected&quot;&gt;Keeping Listeners Informed and Connected&lt;/h2&gt;
+
+&lt;p&gt;Winter weather coverage is a core public service for many radio stations, so downtime during storms has a real impact on communities. Stations often carry school closing information, road conditions, weather updates, and emergency instructions that help people make decisions about travel and safety.&lt;br /&gt;
+Because of this, engineers and on-air staff work closely together to prioritize reliability, sometimes coordinating with emergency managers and utility companies to align technical operations with local needs.&lt;/p&gt;
+
+&lt;p&gt;Some broadcasters deploy additional tools such as internet streams, backup studio-transmitter links (STLs), and alternate transmit sites to ensure that listeners can still receive programming even if one path fails. A listener might simply change from FM to a web stream or tune to a sister station without realizing the complex switching and rerouting happening behind the scenes.&lt;br /&gt;
+The goal is to make the experience as seamless as possible, so that during a storm, people can focus on the information they need rather than the technology that delivers it.&lt;/p&gt;
+
+&lt;h2 id=&quot;key-takeaways-for-listeners&quot;&gt;Key Takeaways for Listeners&lt;/h2&gt;
+
+&lt;p&gt;Winter weather poses significant challenges for radio stations, but thoughtful engineering, specialized hardware, and quick-thinking staff help ensure uninterrupted service. Antenna heaters, radomes, backup power systems, and redundant transmitters all play a role in keeping signals on the air when ice and snow try to knock them off.&lt;br /&gt;
+The next time you tune in during a snowstorm, remember the heaters humming on a mountaintop, the generators running in a remote shelter, and the engineers watching telemetry screens late into the night to keep the airwaves clear and you connected, no matter what Mother Nature throws their way.&lt;/p&gt;
+</description>
+                <pubDate>Sun, 30 Nov 2025 07:00:00 -0600</pubDate>
+                <link>https://fullymodulated.com/frozen-signals-unfrozen-airwaves</link>
+                <guid isPermaLink="true">https://fullymodulated.com/frozen-signals-unfrozen-airwaves</guid>
+                
+                <category>Episodes</category>
+                
+                
+            </item>
         
             <item>
                 <title>Turkey, Transmitters, And Thanks</title>
@@ -454,63 +528,6 @@
                 <guid isPermaLink="true">https://fullymodulated.com/windows-update-nightmare</guid>
                 
                 <category>Engineering</category>
-                
-                
-            </item>
-        
-            <item>
-                <title>KNAC Returns: Legendary Rock Station Relaunches in California&apos;s High Desert</title>
-                <description>&lt;p&gt;At midnight on Halloween, &lt;a href=&quot;https://en.wikipedia.org/wiki/KBUE&quot;&gt;KNAC&lt;/a&gt; returns to FM radio in California’s High Desert, 30 years after signing off 105.5 FM with &lt;a href=&quot;https://www.facebook.com/RIPMagazine/posts/this-week-in-1995-knac-closed-its-doors-after-bidding-us-all-farewell-with-an-em/1046642680834402/&quot;&gt;Metallica’s “Fade to Black”&lt;/a&gt; on February 15, 1995. The question isn’t whether nostalgia can fuel a comeback, it’s whether a terrestrial FM station can recapture what made KNAC legendary in the first place.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-glory-days-were-real&quot;&gt;The Glory Days Were Real&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.playlistresearch.com/la/knac.htm&quot;&gt;KNAC 105.5 FM&lt;/a&gt; launched its “Pure Rock” heavy metal format on &lt;a href=&quot;https://www.facebook.com/groups/6686619556/posts/10159509798489557/&quot;&gt;January 8, 1986&lt;/a&gt;, and instantly became something special. The launch came after four consecutive sold-out &lt;a href=&quot;https://en.wikipedia.org/wiki/Iron_Maiden&quot;&gt;Iron Maiden&lt;/a&gt; shows at the Long Beach Arena proved that heavy metal was more than an underground fad. Despite a weak signal that barely covered the LA market, KNAC built a fiercely loyal fanbase that turned the station into a cultural phenomenon.&lt;/p&gt;
-
-&lt;p&gt;From 1986 to 1995, KNAC was the soundtrack for Southern California metalheads. The station played &lt;a href=&quot;https://en.wikipedia.org/wiki/AC/DC&quot;&gt;AC/DC&lt;/a&gt;, Iron Maiden, and &lt;a href=&quot;https://en.wikipedia.org/wiki/Judas_Priest&quot;&gt;Judas Priest&lt;/a&gt; when other stations wouldn’t touch them. It helped break bands like &lt;a href=&quot;https://en.wikipedia.org/wiki/Metallica&quot;&gt;Metallica&lt;/a&gt; and &lt;a href=&quot;https://en.wikipedia.org/wiki/Megadeth&quot;&gt;Megadeth&lt;/a&gt; into the mainstream. KNAC sold merchandise nationwide, influenced the heavy metal scene, and eventually earned induction into the &lt;a href=&quot;https://www.playlistresearch.com/la/knac.htm&quot;&gt;Rock and Roll Hall of Fame&lt;/a&gt; in 2014.&lt;/p&gt;
-
-&lt;p&gt;The station’s bumper stickers and T-shirts became &lt;a href=&quot;https://www.latimes.com/archives/la-xpm-1994-11-03-ca-58260-story.html&quot;&gt;ubiquitous symbols of rock rebelliousness&lt;/a&gt; throughout Southern California. Even people in Oklahoma knew what KNAC was because major artists wore the station’s shirts. That’s how deep the cultural impact ran.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-streaming-years-kept-the-brand-alive&quot;&gt;The Streaming Years Kept the Brand Alive&lt;/h2&gt;
-
-&lt;p&gt;After the FM signal went dark in 1995, &lt;a href=&quot;https://www.metalsucks.net/2025/10/29/historic-rock-station-knac-to-return-to-radio/&quot;&gt;KNAC.com&lt;/a&gt; kept the brand alive as an internet radio stream starting in February 1998. I didn’t grow up in Southern California, so I never experienced the original 105.5 FM broadcast. But in high school, I spent hours streaming KNAC.com, discovering bands and diving deep into the world of heavy metal from hundreds of miles away.&lt;/p&gt;
-
-&lt;p&gt;The internet stream proved that KNAC’s appeal transcended geography. Without the constraints of terrestrial radio, KNAC.com could be even more adventurous with its playlist. It maintained the attitude and the community that made the original station special, just without the FM dial position.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-challenge-of-returning-to-fm&quot;&gt;The Challenge of Returning to FM&lt;/h2&gt;
-
-&lt;p&gt;Now KNAC is back on FM, broadcasting on &lt;a href=&quot;https://radioinsight.com/headlines/316004/knac-to-relaunch-in-californias-high-desert-on-halloween/&quot;&gt;96.9 in Lenwood/Barstow, 94.9 in Baker, and 99.7 HD3 in Mountain Pass&lt;/a&gt;, covering the I-15 corridor from Southern California to Las Vegas. &lt;a href=&quot;https://radioinsight.com/headlines/316004/knac-to-relaunch-in-californias-high-desert-on-halloween/&quot;&gt;Heftel Broadcasting&lt;/a&gt; is relaunching the brand with Gonzo Greg Spillane, who worked his way from intern to morning host at the original station, now serving as President of Rock.&lt;/p&gt;
-
-&lt;p&gt;The setup sounds promising. The opening hours will feature archival clips, legendary voices like Thrasher and Jack Trash, and those infamous moments that made KNAC’s reputation. The playlist will mix modern acts like &lt;a href=&quot;https://en.wikipedia.org/wiki/Five_Finger_Death_Punch&quot;&gt;Five Finger Death Punch&lt;/a&gt; and &lt;a href=&quot;https://en.wikipedia.org/wiki/Bad_Omens&quot;&gt;Bad Omens&lt;/a&gt; with classics from &lt;a href=&quot;https://en.wikipedia.org/wiki/M%C3%B6tley_Cr%C3%BCe&quot;&gt;Mötley Crüe&lt;/a&gt; and &lt;a href=&quot;https://en.wikipedia.org/wiki/Bon_Jovi&quot;&gt;Bon Jovi&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;But can it work in 2025?&lt;/p&gt;
-
-&lt;h2 id=&quot;what-made-knac-special-cant-be-replicated&quot;&gt;What Made KNAC Special Can’t Be Replicated&lt;/h2&gt;
-
-&lt;p&gt;The original KNAC succeeded because of timing, circumstance, and a willingness to take risks that most &lt;a href=&quot;/categories/radio/&quot;&gt;broadcasters&lt;/a&gt; wouldn’t. The station operated with a weak signal in a market dominated by giants like KMET and KLOS, which gave it underdog credibility. It played music that wasn’t on other stations because it had nothing to lose. The &lt;a href=&quot;https://www.latimes.com/archives/la-xpm-1994-11-03-ca-58260-story.html&quot;&gt;heavy metal scene was exploding&lt;/a&gt; in the mid-1980s, with bands selling out arenas and going platinum despite limited radio support.&lt;/p&gt;
-
-&lt;p&gt;Those conditions don’t exist anymore. By 1994, &lt;a href=&quot;https://www.latimes.com/archives/la-xpm-1994-11-03-ca-58260-story.html&quot;&gt;the LA hard-rock community had become virtually nonexistent&lt;/a&gt;, and the culture around hard-rock music had undergone massive social and musical upheaval. Today, radio itself has been diminished by streaming services, podcasts, and algorithm-driven playlists. The rebellious attitude that defined KNAC has to navigate 2025 broadcast regulations and corporate ownership structures that didn’t exist in the same way 40 years ago.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-high-desert-location-might-be-perfect&quot;&gt;The High Desert Location Might Be Perfect&lt;/h2&gt;
-
-&lt;p&gt;Here’s the twist: KNAC’s new location in California’s High Desert might be exactly what it needs. The station isn’t trying to compete in the Los Angeles market where expectations and competition would be overwhelming. It’s serving a corridor of highway towns and desert communities that actually need a real rock station with personality.&lt;/p&gt;
-
-&lt;p&gt;Spillane told &lt;a href=&quot;https://blabbermouth.net/news/knac-returns-to-airwaves-with-new-era-of-pure-rock&quot;&gt;Blabbermouth&lt;/a&gt;, “The spirit of KNAC was never about living in the past, it was about kicking down the door to the future.” That’s the right mindset. If the new KNAC tries to be a museum piece replaying 1980s glory, it’ll fail. If it uses the KNAC spirit to break new bands and serve its actual community, it has a chance.&lt;/p&gt;
-
-&lt;h2 id=&quot;nostalgia-alone-wont-be-enough&quot;&gt;Nostalgia Alone Won’t Be Enough&lt;/h2&gt;
-
-&lt;p&gt;I want KNAC to succeed. I want it to recapture some of that attitude that made the original station legendary. But nostalgia alone won’t sustain a &lt;a href=&quot;/tags/fm-radio/&quot;&gt;terrestrial radio station&lt;/a&gt; in 2025. The new KNAC needs to be genuinely good radio, not just a tribute act trading on a famous name.&lt;/p&gt;
-
-&lt;p&gt;The pieces are in place. Spillane understands what made KNAC special because he lived it. The station will stream globally on knac.com and knac.fm, combining terrestrial reach with internet distribution. The playlist respects the legends while featuring modern bands. Former personalities are returning alongside new voices.&lt;/p&gt;
-
-&lt;p&gt;But will it have the same rebellious edge that defined Pure Rock in 1986? Will it break new bands and influence the rock scene like the original did? Will it matter to listeners in 2025 the way it mattered to metalheads in 1990?&lt;/p&gt;
-
-&lt;p&gt;Time will tell. I’ll be listening when KNAC returns at midnight on Halloween, hoping that some of that old magic survived the 30-year gap. The spirit might still be there. Whether it can thrive in 2025’s radio landscape is the real question.&lt;/p&gt;
-</description>
-                <pubDate>Thu, 30 Oct 2025 17:00:00 -0500</pubDate>
-                <link>https://fullymodulated.com/knac-relaunch-halloween</link>
-                <guid isPermaLink="true">https://fullymodulated.com/knac-relaunch-halloween</guid>
-                
-                <category>Industry</category>
                 
                 
             </item>

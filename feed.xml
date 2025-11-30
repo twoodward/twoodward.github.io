@@ -5,74 +5,36 @@
         <description>Fully Modulated is a podcast and blog that covers radio, broadcasting technology, industry news, and audio engineering topics.</description>
         <link>https://fullymodulated.com/</link>
         <atom:link href="https://fullymodulated.com/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Sun, 30 Nov 2025 17:24:36 -0600</pubDate>
-        <lastBuildDate>Sun, 30 Nov 2025 17:24:36 -0600</lastBuildDate>
+        <pubDate>Sun, 30 Nov 2025 17:30:25 -0600</pubDate>
+        <lastBuildDate>Sun, 30 Nov 2025 17:30:25 -0600</lastBuildDate>
         <generator>Jekyll v4.4.1</generator>
         
             <item>
                 <title>How Broadcast Towers Survive Winter Ice: Engineering Against the Elements</title>
                 <description>&lt;h1 id=&quot;surviving-winter-weather-how-radio-stations-keep-their-signals-strong&quot;&gt;Surviving Winter Weather: How Radio Stations Keep Their Signals Strong&lt;/h1&gt;
 
-&lt;p&gt;As winter storms hit with full force, radio stations face unique challenges that can disrupt their broadcasts. In this post, you’ll explore how engineers tackle the complications brought on by ice, wind, and snow to keep your favorite stations on air, even in the harshest conditions.&lt;/p&gt;
+&lt;p&gt;As winter storms hit with full force, radio stations face unique challenges that can disrupt their broadcasts. In this post, you’ll explore how engineers tackle the complications brought on by ice and snow to keep your favorite stations on air, even in the harshest conditions.&lt;/p&gt;
 
 &lt;h2 id=&quot;understanding-winters-impact-on-signals&quot;&gt;Understanding Winter’s Impact on Signals&lt;/h2&gt;
 
-&lt;p&gt;When heavy, wet snow blankets the landscape, it does more than create a picturesque scene; it can seriously affect radio and television antennas. The sticky nature of this snow allows it to cling to antenna structures, increasing their physical size and changing their electrical characteristics in ways that distort signals and degrade transmission quality.&lt;br /&gt;
-Ice accumulation adds extra weight to towers, feedlines, and antennas, which can stress structural components, detune carefully engineered systems, and in extreme cases threaten the integrity of the tower itself. Engineers often have to make quick decisions about whether to ride out the storm, reduce power, or risk a temporary loss of the broadcast to protect equipment and ensure staff safety.&lt;/p&gt;
-
-&lt;p&gt;Strong winter winds can make these problems worse by causing antennas and transmission lines to sway, flex, or vibrate. This movement may lead to intermittent connections, arcing on transmission line components, or shifting ice loads that alter how the antenna radiates energy.&lt;br /&gt;
-Temperature swings also play a role, causing metal and fiberglass components to expand and contract, which can affect connections, gaskets, and weatherproofing over time.&lt;/p&gt;
-
-&lt;h2 id=&quot;how-ice-detunes-antennas&quot;&gt;How Ice Detunes Antennas&lt;/h2&gt;
-
-&lt;p&gt;Broadcast antennas are carefully designed for specific frequencies, patterns, and power levels, and even small physical changes can alter their behavior. When snow or ice builds up on an antenna, it essentially changes the antenna’s shape and the environment around it, shifting its resonant frequency and making it less efficient at radiating power.&lt;br /&gt;
-The result can be increased reflected power on the transmission line, higher standing wave ratio (SWR), and more stress on the transmitter as it attempts to push energy into a mismatched load.&lt;/p&gt;
-
-&lt;p&gt;In many facilities, transmitters constantly monitor SWR and will automatically reduce power or shut down entirely if levels exceed safe thresholds. This protection prevents damage but also means listeners may experience weaker signals or brief outages during the worst parts of a storm.&lt;br /&gt;
-Engineers must then decide whether to adjust the system, leave it in a reduced-power mode, or shut down until conditions improve.&lt;/p&gt;
+&lt;p&gt;When heavy, wet snow blankets the landscape, it does more than create a picturesque scene; it can seriously affect radio and television antennas. The sticky nature of this snow can cling to antenna structures, distorting signals and degrading transmission quality.&lt;br /&gt;
+Engineers often have to make quick decisions about whether to ride out the storm, reduce power, or risk a temporary loss of the broadcast to protect equipment.&lt;/p&gt;
 
 &lt;h2 id=&quot;innovative-fixes-for-icy-antennas&quot;&gt;Innovative Fixes for Icy Antennas&lt;/h2&gt;
 
-&lt;p&gt;Many stations use specialized heaters to melt ice buildup on antennas, feedlines, or critical exposed components. These systems may be built into the antenna itself or wrapped around waveguides and coax to keep ice from forming in the first place, helping maintain a clear surface so signals stay strong and consistent.&lt;br /&gt;
-Heater systems must be carefully designed so they do not introduce noise, disturb the antenna’s pattern, or overload power systems already under strain from winter energy usage at remote transmitter sites.&lt;/p&gt;
-
-&lt;p&gt;Some facilities also rely on large fiberglass covers or “radomes” that fully enclose antennas and protect them from the elements. A properly designed radome prevents ice and snow from sticking directly to the antenna, reduces wind loading, and can even help keep the internal environment more stable in terms of temperature and moisture.&lt;br /&gt;
-Engineers must account for the radome’s material properties when designing the antenna system, since even a thin cover can slightly affect signal propagation and pattern if not properly modeled and tested.&lt;/p&gt;
-
-&lt;p&gt;In certain cases, stations will use mechanical solutions such as strategically placed vibration devices or flexible mounts that encourage ice to crack and fall away when wind speeds pick up. These are less common than heaters or radomes, but in specific climates and tower configurations they can provide an extra layer of resilience.&lt;br /&gt;
-The choice of method depends on frequency, antenna type, tower design, available power at the site, and how frequently severe icing conditions occur.&lt;/p&gt;
-
-&lt;h2 id=&quot;power-backup-and-access-challenges&quot;&gt;Power, Backup, and Access Challenges&lt;/h2&gt;
-
-&lt;p&gt;Keeping a station on the air in winter is not just about the antenna; it is also about power and physical access. Many transmitter sites are located on remote hills or towers far from major roads, and heavy snow or ice can make them difficult or impossible to reach for hours or even days.&lt;br /&gt;
-To handle this, engineers design systems with redundant transmitters, automatic changeover switches, and remote monitoring so that many faults can be corrected or worked around without anyone physically visiting the site.&lt;/p&gt;
-
-&lt;p&gt;Backup generators and battery systems are critical at these remote locations, especially when storms bring down power lines or cause prolonged outages. Engineers routinely test generators, fuel systems, and automatic transfer switches before winter to make sure they will start reliably when needed.&lt;br /&gt;
-If commercial power fails, these backup systems take over, keeping transmitters, heaters, and site control equipment energized while utility crews work to restore the grid.&lt;/p&gt;
+&lt;p&gt;Many stations use specialized heaters to melt ice buildup on antennas, helping maintain a clear surface so signals stay strong and consistent.&lt;br /&gt;
+Some facilities also rely on large fiberglass covers or “radomes” that shield antennas from the elements, preventing ice and snow from sticking in the first place.&lt;/p&gt;
 
 &lt;h2 id=&quot;engineers-behind-the-scenes&quot;&gt;Engineers Behind the Scenes&lt;/h2&gt;
 
-&lt;p&gt;During winter storms, the work of engineers becomes especially critical as they monitor conditions and respond in real time. They keep a close eye on telemetry such as transmitter power, SWR, modulation levels, generator status, and site temperature, often from home or a network operations center.&lt;br /&gt;
-If readings show rising reflected power or sudden changes in antenna performance, engineers may remotely reduce power, disable certain components, or switch to backup antennas and transmitters to avoid damage.&lt;/p&gt;
-
-&lt;p&gt;They may use a variety of “weird little tricks” developed from years of experience with a particular site, from slightly adjusting transmitter power to tweak how the antenna behaves under icing, to deliberately shifting to a backup antenna that is less efficient but more tolerant of snow buildup.&lt;br /&gt;
-In some cases, they will temporarily accept a weaker or slightly distorted coverage pattern in order to maintain at least some usable signal for listeners until conditions improve and a full-power configuration can safely return.&lt;/p&gt;
-
-&lt;p&gt;When road conditions allow, engineers may climb towers or access rooftops to visually inspect antennas and transmission lines, clear ice from critical components, or make emergency repairs. These tasks require strict safety procedures, specialized gear, and careful judgment about when it is safe to work aloft in harsh weather.&lt;br /&gt;
-The combination of technical knowledge, physical skill, and risk management makes winter broadcast maintenance a demanding part of the job.&lt;/p&gt;
-
-&lt;h2 id=&quot;keeping-listeners-informed-and-connected&quot;&gt;Keeping Listeners Informed and Connected&lt;/h2&gt;
-
-&lt;p&gt;Winter weather coverage is a core public service for many radio stations, so downtime during storms has a real impact on communities. Stations often carry school closing information, road conditions, weather updates, and emergency instructions that help people make decisions about travel and safety.&lt;br /&gt;
-Because of this, engineers and on-air staff work closely together to prioritize reliability, sometimes coordinating with emergency managers and utility companies to align technical operations with local needs.&lt;/p&gt;
-
-&lt;p&gt;Some broadcasters deploy additional tools such as internet streams, backup studio-transmitter links (STLs), and alternate transmit sites to ensure that listeners can still receive programming even if one path fails. A listener might simply change from FM to a web stream or tune to a sister station without realizing the complex switching and rerouting happening behind the scenes.&lt;br /&gt;
-The goal is to make the experience as seamless as possible, so that during a storm, people can focus on the information they need rather than the technology that delivers it.&lt;/p&gt;
+&lt;p&gt;During winter storms, the work of engineers becomes especially critical as they monitor conditions and respond in real time.&lt;br /&gt;
+They may use a variety of “weird little tricks,” from adjusting transmitter power to tweaking antenna configurations, to adapt to changing weather while keeping the station on the air.&lt;/p&gt;
 
 &lt;h2 id=&quot;key-takeaways-for-listeners&quot;&gt;Key Takeaways for Listeners&lt;/h2&gt;
 
-&lt;p&gt;Winter weather poses significant challenges for radio stations, but thoughtful engineering, specialized hardware, and quick-thinking staff help ensure uninterrupted service. Antenna heaters, radomes, backup power systems, and redundant transmitters all play a role in keeping signals on the air when ice and snow try to knock them off.&lt;br /&gt;
-The next time you tune in during a snowstorm, remember the heaters humming on a mountaintop, the generators running in a remote shelter, and the engineers watching telemetry screens late into the night to keep the airwaves clear and you connected, no matter what Mother Nature throws their way.&lt;/p&gt;
+&lt;p&gt;Winter weather poses significant challenges for radio stations, but innovative tools and quick-thinking engineers help ensure uninterrupted service.&lt;/p&gt;
+
+&lt;p&gt;The next time you tune in during a snowstorm, remember the heaters, protective covers, and behind-the-scenes decisions that keep the airwaves clear and you connected, no matter what Mother Nature throws their way.&lt;/p&gt;
 </description>
                 <pubDate>Sun, 30 Nov 2025 07:00:00 -0600</pubDate>
                 <link>https://fullymodulated.com/frozen-signals-unfrozen-airwaves</link>
